@@ -11,6 +11,7 @@ import terrails.ingotter.config.ConfigHandler;
 import terrails.ingotter.init.ModBlocks;
 import terrails.ingotter.init.ModItems;
 import terrails.ingotter.init.ModOreDictionary;
+import terrails.ingotter.init.ModRecipes;
 import terrails.ingotter.proxies.IProxy;
 import terrails.ingotter.world.OreGenerator;
 
@@ -42,6 +43,7 @@ public class Ingotter {
     public void init(FMLInitializationEvent event) {
         proxy.init(event);
         ModOreDictionary.init();
+        ModRecipes.init();
     }
 
     @Mod.EventHandler
