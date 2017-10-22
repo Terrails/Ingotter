@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "result": {
+    "item": "ingotter:lapis_sword",
+    "data": 0
+  },
+  "pattern": [
+    "I",
+    "I",
+    "S"
+  ],
+  "key": {
+    "I": {
+      "item": "minecraft:dye",
+      "data": 4
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  }
+}

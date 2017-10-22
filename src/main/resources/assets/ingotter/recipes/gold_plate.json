@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "result": {
+    "item": "ingotter:gold_plate",
+    "data": 0,
+    "count": 1
+  },
+  "ingredients": [
+    {
+      "type": "forge:ore_dict",
+      "ore": "ingotGold"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "ingotGold"
+    },
+    {
+      "item": "ingotter:hammer",
+      "data": 32767
+    }
+  ]
+}

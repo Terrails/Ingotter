@@ -1,0 +1,276 @@
+## English US Localization of Ingotter ##
+
+# Ores
+tile.lapis_ore_nether.name=Lapis Lazuli Ore
+tile.lapis_ore_end.name=Lapis Lazuli Ore
+tile.iron_ore_nether.name=Iron Ore
+tile.iron_ore_end.name=Iron Ore
+tile.emerald_ore_nether.name=Emerald Ore
+tile.emerald_ore_end.name=Emerald Ore
+tile.gold_ore_nether.name=Gold Ore
+tile.gold_ore_end.name=Gold Ore
+tile.diamond_ore_nether.name=Diamond Ore
+tile.diamond_ore_end.name=Diamond Ore
+tile.redstone_ore_nether.name=Redstone Ore
+tile.redstone_ore_end.name=Redstone Ore
+tile.coal_ore_nether.name=Coal Ore
+tile.coal_ore_end.name=Coal Ore
+
+tile.copper_ore.name=Copper Ore
+tile.tin_ore.name=Tin Ore
+tile.silver_ore.name=Silver Ore
+tile.lead_ore.name=Lead Ore
+tile.aluminum_ore.name=Aluminum Ore
+tile.nickel_ore.name=Nickel Ore
+tile.platinum_ore.name=Platinum Ore
+
+tile.copper_ore_nether.name=Copper Ore
+tile.tin_ore_nether.name=Tin Ore
+tile.silver_ore_nether.name=Silver Ore
+tile.lead_ore_nether.name=Lead Ore
+tile.aluminum_ore_nether.name=Aluminum Ore
+tile.nickel_ore_nether.name=Nickel Ore
+tile.platinum_ore_nether.name=Platinum Ore
+
+tile.copper_ore_end.name=Copper Ore
+tile.tin_ore_end.name=Tin Ore
+tile.silver_ore_end.name=Silver Ore
+tile.lead_ore_end.name=Lead Ore
+tile.aluminum_ore_end.name=Aluminum Ore
+tile.nickel_ore_end.name=Nickel Ore
+tile.platinum_ore_end.name=Platinum Ore
+
+# Items
+item.hammer.name=Hammer
+item.wire_cutters.name=Wire Cutters
+
+# Dusts
+item.iron_dust.name=Iron Dust
+item.gold_dust.name=Gold Dust
+item.copper_dust.name=Copper Dust
+item.tin_dust.name=Tin Dust
+item.silver_dust.name=Silver Dust
+item.lead_dust.name=Lead Dust
+item.aluminum_dust.name=Aluminum Dust
+item.nickel_dust.name=Nickel Dust
+item.platinum_dust.name=Platinum Dust
+item.steel_dust.name=Steel Dust
+item.electrum_dust.name=Electrum Dust
+item.bronze_dust.name=Bronze Dust
+item.coal_dust.name=Coal Dust
+item.diamond_dust.name=Diamond Dust
+item.emerald_dust.name=Emerald Dust
+item.lapis_dust.name=Lapis Dust
+
+# Plates
+item.iron_plate.name=Iron Plate
+item.gold_plate.name=Gold Plate
+item.tin_plate.name=Tin Plate
+item.copper_plate.name=Copper Plate
+item.silver_plate.name=Silver Plate
+item.lead_plate.name=Lead Plate
+item.aluminum_plate.name=Aluminum Plate
+item.nickel_plate.name=Nickel Plate
+item.platinum_plate.name=Platinum Plate
+item.steel_plate.name=Steel Plate
+item.electrum_plate.name=Electrum Plate
+item.bronze_plate.name=Bronze Plate
+item.coal_plate.name=Coal Plate
+item.diamond_plate.name=Diamond Plate
+item.emerald_plate.name=Emerald Plate
+item.redstone_plate.name=Redstone Plate
+item.lapis_plate.name=Lapis Plate
+
+# Wires
+item.iron_wire.name=Iron Wire
+item.gold_wire.name=Gold Wire
+item.tin_wire.name=Tin Wire
+item.copper_wire.name=Copper Wire
+item.silver_wire.name=Silver Wire
+item.lead_wire.name=Lead Wire
+item.aluminum_wire.name=Aluminum Wire
+item.nickel_wire.name=Nickel Wire
+item.platinum_wire.name=Platinum Wire
+item.steel_wire.name=Steel Wire
+item.electrum_wire.name=Electrum Wire
+item.bronze_wire.name=Bronze Wire
+item.coal_wire.name=Coal Wire
+item.diamond_wire.name=Diamond Wire
+item.emerald_wire.name=Emerald Wire
+item.redstone_wire.name=Redstone Wire
+item.lapis_wire.name=Lapis Wire
+
+# Blocks
+tile.copper_block.name=Copper Block
+tile.tin_block.name=Tin Block
+tile.silver_block.name=Silver Block
+tile.lead_block.name=Lead Block
+tile.aluminum_block.name=Aluminum Block
+tile.nickel_block.name=Nickel Block
+tile.platinum_block.name=Platinum Block
+tile.steel_block.name=Steel Block
+tile.electrum_block.name=Electrum Block
+tile.bronze_block.name=Bronze Block
+
+# Ingots
+item.copper_ingot.name=Copper Ingot
+item.tin_ingot.name=Tin Ingot
+item.silver_ingot.name=Silver Ingot
+item.lead_ingot.name=Lead Ingot
+item.aluminum_ingot.name=Aluminum Ingot
+item.nickel_ingot.name=Nickel Ingot
+item.platinum_ingot.name=Platinum Ingot
+item.steel_ingot.name=Steel Ingot
+item.electrum_ingot.name=Electrum Ingot
+item.bronze_ingot.name=Bronze Ingot
+
+# Nuggets
+item.copper_nugget.name=Copper Nugget
+item.tin_nugget.name=Tin Nugget
+item.silver_nugget.name=Silver Nugget
+item.lead_nugget.name=Lead Nugget
+item.aluminum_nugget.name=Aluminum Nugget
+item.nickel_nugget.name=Nickel Nugget
+item.platinum_nugget.name=Platinum Nugget
+item.steel_nugget.name=Steel Nugget
+item.electrum_nugget.name=Electrum Nugget
+item.bronze_nugget.name=Bronze Nugget
+item.coal_nugget.name=Coal Nugget
+item.diamond_nugget.name=Diamond Nugget
+item.emerald_nugget.name=Emerald Nugget
+item.lapis_nugget.name=Lapis Nugget
+item.iron_nugget.name=Iron Nugget
+item.redstone_nugget.name=Redstone Nugget
+
+# Tools
+item.copper_sword.name=Copper Sword
+item.tin_sword.name=Tin Sword
+item.silver_sword.name=Silver Sword
+item.lead_sword.name=Lead Sword
+item.aluminum_sword.name=Aluminum Sword
+item.nickel_sword.name=Nickel Sword
+item.platinum_sword.name=Platinum Sword
+item.steel_sword.name=Steel Sword
+item.electrum_sword.name=Electrum Sword
+item.bronze_sword.name=Bronze Sword
+item.emerald_sword.name=Emerald Sword
+item.lapis_sword.name=Lapis Sword
+item.redstone_sword.name=Redstone Sword
+
+item.copper_pickaxe.name=Copper Pickaxe
+item.tin_pickaxe.name=Tin Pickaxe
+item.silver_pickaxe.name=Silver Pickaxe
+item.lead_pickaxe.name=Lead Pickaxe
+item.aluminum_pickaxe.name=Aluminum Pickaxe
+item.nickel_pickaxe.name=Nickel Pickaxe
+item.platinum_pickaxe.name=Platinum Pickaxe
+item.steel_pickaxe.name=Steel Pickaxe
+item.electrum_pickaxe.name=Electrum Pickaxe
+item.bronze_pickaxe.name=Bronze Pickaxe
+item.emerald_pickaxe.name=Emerald Pickaxe
+item.lapis_pickaxe.name=Lapis Pickaxe
+item.redstone_pickaxe.name=Redstone Pickaxe
+
+item.copper_shovel.name=Copper Shovel
+item.tin_shovel.name=Tin Shovel
+item.silver_shovel.name=Silver Shovel
+item.lead_shovel.name=Lead Shovel
+item.aluminum_shovel.name=Aluminum Shovel
+item.nickel_shovel.name=Nickel Shovel
+item.platinum_shovel.name=Platinum Shovel
+item.steel_shovel.name=Steel Shovel
+item.electrum_shovel.name=Electrum Shovel
+item.bronze_shovel.name=Bronze Shovel
+item.emerald_shovel.name=Emerald Shovel
+item.lapis_shovel.name=Lapis Shovel
+item.redstone_shovel.name=Redstone Shovel
+
+item.copper_axe.name=Copper Axe
+item.tin_axe.name=Tin Axe
+item.silver_axe.name=Silver Axe
+item.lead_axe.name=Lead Axe
+item.aluminum_axe.name=Aluminum Axe
+item.nickel_axe.name=Nickel Axe
+item.platinum_axe.name=Platinum Axe
+item.steel_axe.name=Steel Axe
+item.electrum_axe.name=Electrum Axe
+item.bronze_axe.name=Bronze Axe
+item.emerald_axe.name=Emerald Axe
+item.lapis_axe.name=Lapis Axe
+item.redstone_axe.name=Redstone Axe
+
+item.copper_hoe.name=Copper Hoe
+item.tin_hoe.name=Tin Hoe
+item.silver_hoe.name=Silver Hoe
+item.lead_hoe.name=Lead Hoe
+item.aluminum_hoe.name=Aluminum Hoe
+item.nickel_hoe.name=Nickel Hoe
+item.platinum_hoe.name=Platinum Hoe
+item.steel_hoe.name=Steel Hoe
+item.electrum_hoe.name=Electrum Hoe
+item.bronze_hoe.name=Bronze Hoe
+item.emerald_hoe.name=Emerald Hoe
+item.lapis_hoe.name=Lapis Hoe
+item.redstone_hoe.name=Redstone Hoe
+
+
+# Armor
+item.copper_helmet.name=Copper Helmet
+item.tin_helmet.name=Tin Helmet
+item.silver_helmet.name=Silver Helmet
+item.lead_helmet.name=Lead Helmet
+item.aluminum_helmet.name=Aluminum Helmet
+item.nickel_helmet.name=Nickel Helmet
+item.platinum_helmet.name=Platinum Helmet
+item.steel_helmet.name=Steel Helmet
+item.electrum_helmet.name=Electrum Helmet
+item.bronze_helmet.name=Bronze Helmet
+item.emerald_helmet.name=Emerald Helmet
+item.lapis_helmet.name=Lapis Helmet
+item.redstone_helmet.name=Redstone Helmet
+
+item.copper_chestplate.name=Copper Chestplate
+item.tin_chestplate.name=Tin Chestplate
+item.silver_chestplate.name=Silver Chestplate
+item.lead_chestplate.name=Lead Chestplate
+item.aluminum_chestplate.name=Aluminum Chestplate
+item.nickel_chestplate.name=Nickel Chestplate
+item.platinum_chestplate.name=Platinum Chestplate
+item.steel_chestplate.name=Steel Chestplate
+item.electrum_chestplate.name=Electrum Chestplate
+item.bronze_chestplate.name=Bronze Chestplate
+item.emerald_chestplate.name=Emerald Chestplate
+item.lapis_chestplate.name=Lapis Chestplate
+item.redstone_chestplate.name=Redstone Chestplate
+
+item.copper_leggings.name=Copper Leggings
+item.tin_leggings.name=Tin Leggings
+item.silver_leggings.name=Silver Leggings
+item.lead_leggings.name=Lead Leggings
+item.aluminum_leggings.name=Aluminum Leggings
+item.nickel_leggings.name=Nickel Leggings
+item.platinum_leggings.name=Platinum Leggings
+item.steel_leggings.name=Steel Leggings
+item.electrum_leggings.name=Electrum Leggings
+item.bronze_leggings.name=Bronze Leggings
+item.emerald_leggings.name=Emerald Leggings
+item.lapis_leggings.name=Lapis Leggings
+item.redstone_leggings.name=Redstone Leggings
+
+item.copper_boots.name=Copper Boots
+item.tin_boots.name=Tin Boots
+item.silver_boots.name=Silver Boots
+item.lead_boots.name=Lead Boots
+item.aluminum_boots.name=Aluminum Boots
+item.nickel_boots.name=Nickel Boots
+item.platinum_boots.name=Platinum Boots
+item.steel_boots.name=Steel Boots
+item.electrum_boots.name=Electrum Boots
+item.bronze_boots.name=Bronze Boots
+item.emerald_boots.name=Emerald Boots
+item.lapis_boots.name=Lapis Boots
+item.redstone_boots.name=Redstone Boots
+
+# Creative Tab
+itemGroup.ingotter_resources=Ingotter Resources
+itemGroup.ingotter_tools=Ingotter Tools

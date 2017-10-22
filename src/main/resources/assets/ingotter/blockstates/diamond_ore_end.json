@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "normal": {"model": "ingotter:diamond_ore_end"},
+    "inventory": {"model": "ingotter:diamond_ore_end"}
+  }
+}

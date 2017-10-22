@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "result": {
+    "item": "ingotter:coal_dust",
+    "data": 0,
+    "count": 1
+  },
+  "ingredients": [
+    {
+      "item": "minecraft:coal",
+      "data": 0
+    },
+    {
+      "item": "ingotter:hammer",
+      "data": 32767
+    }
+  ]
+}

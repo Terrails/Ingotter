@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "result": {
+    "item": "ingotter:silver_axe",
+    "data": 0
+  },
+  "pattern": [
+    "II",
+    "IS",
+    " S"
+  ],
+  "key": {
+    "I": {
+      "type": "forge:ore_dict",
+      "ore": "ingotSilver"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  }
+}

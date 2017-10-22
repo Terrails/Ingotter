@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "normal": {"model": "ingotter:lapis_ore_end"},
+    "inventory": {"model": "ingotter:lapis_ore_end"}
+  }
+}

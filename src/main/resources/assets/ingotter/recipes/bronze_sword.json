@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "result": {
+    "item": "ingotter:bronze_sword",
+    "data": 0
+  },
+  "pattern": [
+    "I",
+    "I",
+    "S"
+  ],
+  "key": {
+    "I": {
+      "type": "forge:ore_dict",
+      "ore": "ingotBronze"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  }
+}

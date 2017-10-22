@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "normal": {"model": "ingotter:iron_ore_nether"},
+    "inventory": {"model": "ingotter:iron_ore_nether"}
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "normal": {"model": "ingotter:coal_ore_end"},
+    "inventory": {"model": "ingotter:coal_ore_end"}
+  }
+}

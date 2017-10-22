@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "result": {
+    "item": "ingotter:tin_plate",
+    "data": 0,
+    "count": 1
+  },
+  "ingredients": [
+    {
+      "type": "forge:ore_dict",
+      "ore": "ingotTin"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "ingotTin"
+    },
+    {
+      "item": "ingotter:hammer",
+      "data": 32767
+    }
+  ]
+}

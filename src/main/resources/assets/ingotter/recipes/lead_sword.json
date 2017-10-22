@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "result": {
+    "item": "ingotter:lead_sword",
+    "data": 0
+  },
+  "pattern": [
+    "I",
+    "I",
+    "S"
+  ],
+  "key": {
+    "I": {
+      "type": "forge:ore_dict",
+      "ore": "ingotLead"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  }
+}

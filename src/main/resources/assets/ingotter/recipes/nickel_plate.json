@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "result": {
+    "item": "ingotter:nickel_plate",
+    "data": 0,
+    "count": 1
+  },
+  "ingredients": [
+    {
+      "type": "forge:ore_dict",
+      "ore": "ingotNickel"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "ingotNickel"
+    },
+    {
+      "item": "ingotter:hammer",
+      "data": 32767
+    }
+  ]
+}

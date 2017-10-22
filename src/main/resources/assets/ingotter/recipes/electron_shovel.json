@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "result": {
+    "item": "ingotter:electron_shovel",
+    "data": 0
+  },
+  "pattern": [
+    "I",
+    "S",
+    "S"
+  ],
+  "key": {
+    "I": {
+      "type": "forge:ore_dict",
+      "ore": "ingotElectron"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  }
+}

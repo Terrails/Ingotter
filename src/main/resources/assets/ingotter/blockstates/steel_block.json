@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "normal": {"model": "ingotter:steel_block"},
+    "inventory": {"model": "ingotter:steel_block"}
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "ingotter:blocks/aluminum_ore_nether"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "result": {
+    "item": "ingotter:nickel_sword",
+    "data": 0
+  },
+  "pattern": [
+    "I",
+    "I",
+    "S"
+  ],
+  "key": {
+    "I": {
+      "type": "forge:ore_dict",
+      "ore": "ingotNickel"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  }
+}

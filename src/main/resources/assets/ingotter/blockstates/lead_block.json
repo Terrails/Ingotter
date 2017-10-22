@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "normal": {"model": "ingotter:lead_block"},
+    "inventory": {"model": "ingotter:lead_block"}
+  }
+}

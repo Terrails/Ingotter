@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "result": {
+    "item": "ingotter:iron_dust",
+    "data": 0,
+    "count": 2
+  },
+  "ingredients": [
+    {
+      "type": "forge:ore_dict",
+      "ore": "oreIron"
+    },
+    {
+      "item": "ingotter:hammer",
+      "data": 32767
+    }
+  ]
+}

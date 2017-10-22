@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "normal": {"model": "ingotter:nickel_ore_end"},
+    "inventory": {"model": "ingotter:nickel_ore_end"}
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "normal": {"model": "ingotter:silver_ore"},
+    "inventory": {"model": "ingotter:silver_ore"}
+  }
+}

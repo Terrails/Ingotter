@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "normal": {"model": "ingotter:aluminum_ore_end"},
+    "inventory": {"model": "ingotter:aluminum_ore_end"}
+  }
+}

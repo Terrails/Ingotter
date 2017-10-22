@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "result": {
+    "item": "ingotter:lapis_helmet",
+    "data": 0
+  },
+  "pattern": [
+    "III",
+    "I I"
+  ],
+  "key": {
+    "I": {
+      "item": "minecraft:dye",
+      "data": 4
+    }
+  }
+}

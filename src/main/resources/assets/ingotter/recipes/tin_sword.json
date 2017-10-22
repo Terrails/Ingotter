@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "result": {
+    "item": "ingotter:tin_sword",
+    "data": 0
+  },
+  "pattern": [
+    "I",
+    "I",
+    "S"
+  ],
+  "key": {
+    "I": {
+      "type": "forge:ore_dict",
+      "ore": "ingotTin"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  }
+}

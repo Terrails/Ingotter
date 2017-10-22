@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "result": {
+    "item": "ingotter:lapis_axe",
+    "data": 0
+  },
+  "pattern": [
+    "II",
+    "IS",
+    " S"
+  ],
+  "key": {
+    "I": {
+      "item": "minecraft:dye",
+      "data": 4
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  }
+}

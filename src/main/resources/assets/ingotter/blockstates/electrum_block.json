@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "normal": {"model": "ingotter:electrum_block"},
+    "inventory": {"model": "ingotter:electrum_block"}
+  }
+}

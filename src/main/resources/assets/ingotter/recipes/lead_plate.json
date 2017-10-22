@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "result": {
+    "item": "ingotter:lead_plate",
+    "data": 0,
+    "count": 1
+  },
+  "ingredients": [
+    {
+      "type": "forge:ore_dict",
+      "ore": "ingotLead"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "ingotLead"
+    },
+    {
+      "item": "ingotter:hammer",
+      "data": 32767
+    }
+  ]
+}

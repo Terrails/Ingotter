@@ -1,0 +1,33 @@
+## English UK Localization of Ingotter ##
+
+# Ores
+tile.aluminum_ore.name=Aluminium Ore
+tile.aluminum_ore_nether.name=Aluminium Ore
+tile.aluminum_ore_end.name=Aluminium Ore
+
+# Items
+item.aluminum_dust.name=Aluminium Dust
+item.aluminum_plate.name=Aluminium Plate
+item.aluminum_wire.name=Aluminium Wire
+
+# Blocks
+tile.aluminum_block.name=Aluminium Block
+
+# Ingots
+item.aluminum_ingot.name=Aluminium Ingot
+
+# Nuggets
+item.aluminum_nugget.name=Aluminium Nugget
+
+# Tools
+item.aluminum_sword.name=Aluminium Sword
+item.aluminum_pickaxe.name=Aluminium Pickaxe
+item.aluminum_shovel.name=Aluminium Shovel
+item.aluminum_axe.name=Aluminium Axe
+item.aluminum_hoe.name=Aluminium Hoe
+
+# Armor
+item.aluminum_helmet.name=Aluminium Helmet
+item.aluminum_chestplate.name=Aluminium Chestplate
+item.aluminum_leggings.name=Aluminium Leggings
+item.aluminum_boots.name=Aluminium Boots
