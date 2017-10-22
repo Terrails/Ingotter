@@ -38,7 +38,7 @@ public class ConfigHandler {
     }
 
     public static void syncConfig() {
-        tools = config.get(FEATURES, "Wire Cutters & Hammer", true).getBoolean();
+        tools = config.get(FEATURES, "Tools", true).getBoolean();
         ores = config.get(FEATURES, "Ores", true).getBoolean();
         plates = config.get(FEATURES, "Plates", true).getBoolean();
         dusts = config.get(FEATURES, "Dusts", true).getBoolean();
