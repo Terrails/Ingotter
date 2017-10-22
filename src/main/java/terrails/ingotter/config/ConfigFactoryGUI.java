@@ -10,16 +10,6 @@ import java.util.Set;
 public class ConfigFactoryGUI implements IModGuiFactory {
 
     @Override
-    public boolean hasConfigGui() {
-        return true;
-    }
-
-    @Override
-    public GuiScreen createConfigGui(GuiScreen parentScreen) {
-        return new GUIConfig(parentScreen);
-    }
-
-    @Override
     public void initialize(Minecraft minecraftInstance) {
 
     }
@@ -27,7 +17,7 @@ public class ConfigFactoryGUI implements IModGuiFactory {
     @Override
     @SuppressWarnings("deprecation")
     public Class<? extends GuiScreen> mainConfigGuiClass() {
-        return null;
+        return GUIConfig.class;
     }
 
     @Nullable

@@ -20,7 +20,7 @@ public class Constants {
     public static final String MOD_VERSION = "@VERSION@";
     public static final String TERRACORE_VERSION = "2.1.1";
     public static final String ORE_CONTROLLER_VERSION = "1.0.0";
-    public static final String MC_VERSION = "[1.11],[1.11.1],[1.11.2]";
+    public static final String MC_VERSION = "[1.10],[1.10.1],[1.10.2]";
 
     public static final String CLIENT_PROXY = "terrails.ingotter.proxies.ClientProxy";
     public static final String SERVER_PROXY = "terrails.ingotter.proxies.ServerProxy";

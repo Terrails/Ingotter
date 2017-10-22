@@ -257,7 +257,6 @@ public class ModItems extends ItemRegistry {
             initTools();
 
         for (Item item : getItems()) {
-            GameRegistry.register(item);
             if (item.getUnlocalizedName().contains("_helmet") || item.getUnlocalizedName().contains("_chestplate") || item.getUnlocalizedName().contains("_leggings") || item.getUnlocalizedName().contains("_boots")) {
                 item.setCreativeTab(Constants.TOOLS_TAB);
             } else if (item.getUnlocalizedName().contains("_sword") || item.getUnlocalizedName().contains("_pickaxe") || item.getUnlocalizedName().contains("_axe") || item.getUnlocalizedName().contains("_shovel") || item.getUnlocalizedName().contains("_hoe")) {

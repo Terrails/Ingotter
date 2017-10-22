@@ -4,7 +4,6 @@ import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.NonNullList;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import terrails.ingotter.Constants;
@@ -13,10 +12,11 @@ import terrails.ingotter.init.ModBlocks;
 import terrails.ingotter.init.ModItems;
 
 import javax.annotation.Nonnull;
+import java.util.List;
 
 public class ModResourcesCreativeTab extends CreativeTabs {
 
-    private NonNullList<ItemStack> list;
+    private List<ItemStack> list;
 
     public ModResourcesCreativeTab() {
         super("ingotter_resources");
@@ -24,14 +24,14 @@ public class ModResourcesCreativeTab extends CreativeTabs {
 
     @Override
     @Nonnull
-    public ItemStack getTabIconItem() {
-        return new ItemStack(ModBlocks.COPPER_ORE);
+    public Item getTabIconItem() {
+        return new ItemStack(ModBlocks.COPPER_ORE).getItem();
     }
 
 
     @SideOnly(Side.CLIENT)
     @Override
-    public void displayAllRelevantItems(@Nonnull NonNullList<ItemStack> list) {
+    public void displayAllRelevantItems(@Nonnull List<ItemStack> list) {
         this.list = list;
 
         if (ConfigHandler.ores) {
