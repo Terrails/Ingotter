@@ -56,17 +56,17 @@ public class ModToolsCreativeTab extends CreativeTabs {
 
     private void add(Item item){
         if(item != null){
-            item.getSubItems(Constants.TOOLS_TAB, this.list);
+            item.getSubItems(item, Constants.TOOLS_TAB, this.list);
         }
     }
     private void add(Block block){
         if(block != null){
-            block.getSubBlocks(Constants.TOOLS_TAB, this.list);
+            block.getSubBlocks(new ItemStack(block).getItem(), Constants.TOOLS_TAB, this.list);
         }
     }
     private void add(Item item, int meta){
         if(item != null){
-            new ItemStack(item, 1, meta).getItem().getSubItems(Constants.TOOLS_TAB, this.list);
+            new ItemStack(item, 1, meta).getItem().getSubItems(new ItemStack(item, 1, meta).getItem(), Constants.TOOLS_TAB, this.list);
         }
     }
 }

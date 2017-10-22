@@ -9,6 +9,7 @@ import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import terrails.ingotter.Constants;
@@ -234,8 +235,8 @@ public class ModItems extends ItemRegistry {
     public static Item REDSTONE_BOOTS;
 
     public static void init() {
-        HAMMER = addItem(new ItemCraftingDurabilityBase("hammer", 128, true).setCreativeTab(Constants.TOOLS_TAB));
-        WIRE_CUTTERS = addItem(new ItemCraftingDurabilityBase("wire_cutters", 128, true).setCreativeTab(Constants.TOOLS_TAB));
+        HAMMER = registerItem(new ItemCraftingDurabilityBase("hammer", 128, true).setCreativeTab(Constants.TOOLS_TAB));
+        WIRE_CUTTERS = registerItem(new ItemCraftingDurabilityBase("wire_cutters", 128, true).setCreativeTab(Constants.TOOLS_TAB));
 
         initIngots();
         if (ConfigHandler.plates)
@@ -256,6 +257,7 @@ public class ModItems extends ItemRegistry {
             initTools();
 
         for (Item item : getItems()) {
+            GameRegistry.register(item);
             if (item.getUnlocalizedName().contains("_helmet") || item.getUnlocalizedName().contains("_chestplate") || item.getUnlocalizedName().contains("_leggings") || item.getUnlocalizedName().contains("_boots")) {
                 item.setCreativeTab(Constants.TOOLS_TAB);
             } else if (item.getUnlocalizedName().contains("_sword") || item.getUnlocalizedName().contains("_pickaxe") || item.getUnlocalizedName().contains("_axe") || item.getUnlocalizedName().contains("_shovel") || item.getUnlocalizedName().contains("_hoe")) {
@@ -272,274 +274,243 @@ public class ModItems extends ItemRegistry {
         }
     }
 
-
     private static void initIngots() {
-        COPPER_INGOT = addItem(new ItemBase("copper_ingot"));
-        TIN_INGOT = addItem(new ItemBase("tin_ingot"));
-        SILVER_INGOT = addItem(new ItemBase("silver_ingot"));
-        LEAD_INGOT = addItem(new ItemBase("lead_ingot"));
-        ALUMINUM_INGOT = addItem(new ItemBase("aluminum_ingot"));
-        NICKEL_INGOT = addItem(new ItemBase("nickel_ingot"));
-        PLATINUM_INGOT = addItem(new ItemBase("platinum_ingot"));
-        STEEL_INGOT = addItem(new ItemBase("steel_ingot"));
-        ELECTRUM_INGOT = addItem(new ItemBase("electrum_ingot"));
-        BRONZE_INGOT = addItem(new ItemBase("bronze_ingot"));
+        COPPER_INGOT = registerItem(new ItemBase("copper_ingot"));
+        TIN_INGOT = registerItem(new ItemBase("tin_ingot"));
+        SILVER_INGOT = registerItem(new ItemBase("silver_ingot"));
+        LEAD_INGOT = registerItem(new ItemBase("lead_ingot"));
+        ALUMINUM_INGOT = registerItem(new ItemBase("aluminum_ingot"));
+        NICKEL_INGOT = registerItem(new ItemBase("nickel_ingot"));
+        PLATINUM_INGOT = registerItem(new ItemBase("platinum_ingot"));
+        STEEL_INGOT = registerItem(new ItemBase("steel_ingot"));
+        ELECTRUM_INGOT = registerItem(new ItemBase("electrum_ingot"));
+        BRONZE_INGOT = registerItem(new ItemBase("bronze_ingot"));
     }
     private static void initNuggets() {
-        COPPER_NUGGET = addItem(new ItemBase("copper_nugget"));
-        TIN_NUGGET = addItem(new ItemBase("tin_nugget"));
-        SILVER_NUGGET = addItem(new ItemBase("silver_nugget"));
-        LEAD_NUGGET = addItem(new ItemBase("lead_nugget"));
-        ALUMINUM_NUGGET = addItem(new ItemBase("aluminum_nugget"));
-        NICKEL_NUGGET = addItem(new ItemBase("nickel_nugget"));
-        PLATINUM_NUGGET = addItem(new ItemBase("platinum_nugget"));
-        STEEL_NUGGET = addItem(new ItemBase("steel_nugget"));
-        ELECTRUM_NUGGET = addItem(new ItemBase("electrum_nugget"));
-        BRONZE_NUGGET = addItem(new ItemBase("bronze_nugget"));
-        IRON_NUGGET = addItem(new ItemBase("iron_nugget"));
-        COAL_NUGGET = addItem(new ItemBase("coal_nugget") {
-            @Override
-            public int getItemBurnTime(ItemStack itemStack) {
-                return 200;
-            }
-        });
-        DIAMOND_NUGGET = addItem(new ItemBase("diamond_nugget"));
-        EMERALD_NUGGET = addItem(new ItemBase("emerald_nugget"));
-        LAPIS_NUGGET = addItem(new ItemBase("lapis_nugget"));
-        REDSTONE_NUGGET = addItem(new ItemBase("redstone_nugget"));
+        COPPER_NUGGET = registerItem(new ItemBase("copper_nugget"));
+        TIN_NUGGET = registerItem(new ItemBase("tin_nugget"));
+        SILVER_NUGGET = registerItem(new ItemBase("silver_nugget"));
+        LEAD_NUGGET = registerItem(new ItemBase("lead_nugget"));
+        ALUMINUM_NUGGET = registerItem(new ItemBase("aluminum_nugget"));
+        NICKEL_NUGGET = registerItem(new ItemBase("nickel_nugget"));
+        PLATINUM_NUGGET = registerItem(new ItemBase("platinum_nugget"));
+        STEEL_NUGGET = registerItem(new ItemBase("steel_nugget"));
+        ELECTRUM_NUGGET = registerItem(new ItemBase("electrum_nugget"));
+        BRONZE_NUGGET = registerItem(new ItemBase("bronze_nugget"));
+        IRON_NUGGET = registerItem(new ItemBase("iron_nugget"));
+        COAL_NUGGET = registerItem(new ItemBase("coal_nugget"));
+        DIAMOND_NUGGET = registerItem(new ItemBase("diamond_nugget"));
+        EMERALD_NUGGET = registerItem(new ItemBase("emerald_nugget"));
+        LAPIS_NUGGET = registerItem(new ItemBase("lapis_nugget"));
+        REDSTONE_NUGGET = registerItem(new ItemBase("redstone_nugget"));
     }
     private static void initDusts() {
-        COPPER_DUST = addItem(new ItemBase("copper_dust"));
-        TIN_DUST = addItem(new ItemBase("tin_dust"));
-        SILVER_DUST = addItem(new ItemBase("silver_dust"));
-        LEAD_DUST = addItem(new ItemBase("lead_dust"));
-        ALUMINUM_DUST = addItem(new ItemBase("aluminum_dust"));
-        NICKEL_DUST = addItem(new ItemBase("nickel_dust"));
-        PLATINUM_DUST = addItem(new ItemBase("platinum_dust"));
-        STEEL_DUST = addItem(new ItemBase("steel_dust"));
-        ELECTRUM_DUST = addItem(new ItemBase("electrum_dust"));
-        BRONZE_DUST = addItem(new ItemBase("bronze_dust"));
-        IRON_DUST = addItem(new ItemBase("iron_dust"));
-        GOLD_DUST = addItem(new ItemBase("gold_dust"));
-        COAL_DUST = addItem(new ItemBase("coal_dust") {
-            @Override
-            public int getItemBurnTime(ItemStack itemStack) {
-                return 1800;
-            }
-        });
-        DIAMOND_DUST = addItem(new ItemBase("diamond_dust"));
-        EMERALD_DUST = addItem(new ItemBase("emerald_dust"));
-        LAPIS_DUST = addItem(new ItemBase("lapis_dust"));
+        COPPER_DUST = registerItem(new ItemBase("copper_dust"));
+        TIN_DUST = registerItem(new ItemBase("tin_dust"));
+        SILVER_DUST = registerItem(new ItemBase("silver_dust"));
+        LEAD_DUST = registerItem(new ItemBase("lead_dust"));
+        ALUMINUM_DUST = registerItem(new ItemBase("aluminum_dust"));
+        NICKEL_DUST = registerItem(new ItemBase("nickel_dust"));
+        PLATINUM_DUST = registerItem(new ItemBase("platinum_dust"));
+        STEEL_DUST = registerItem(new ItemBase("steel_dust"));
+        ELECTRUM_DUST = registerItem(new ItemBase("electrum_dust"));
+        BRONZE_DUST = registerItem(new ItemBase("bronze_dust"));
+        IRON_DUST = registerItem(new ItemBase("iron_dust"));
+        GOLD_DUST = registerItem(new ItemBase("gold_dust"));
+        COAL_DUST = registerItem(new ItemBase("coal_dust"));
+        DIAMOND_DUST = registerItem(new ItemBase("diamond_dust"));
+        EMERALD_DUST = registerItem(new ItemBase("emerald_dust"));
+        LAPIS_DUST = registerItem(new ItemBase("lapis_dust"));
     }
     private static void initPlates() {
-        COPPER_PLATE = addItem(new ItemBase("copper_plate"));
-        TIN_PLATE = addItem(new ItemBase("tin_plate"));
-        SILVER_PLATE = addItem(new ItemBase("silver_plate"));
-        LEAD_PLATE = addItem(new ItemBase("lead_plate"));
-        ALUMINUM_PLATE = addItem(new ItemBase("aluminum_plate"));
-        NICKEL_PLATE = addItem(new ItemBase("nickel_plate"));
-        PLATINUM_PLATE = addItem(new ItemBase("platinum_plate"));
-        STEEL_PLATE = addItem(new ItemBase("steel_plate"));
-        ELECTRUM_PLATE = addItem(new ItemBase("electrum_plate"));
-        BRONZE_PLATE = addItem(new ItemBase("bronze_plate"));
-        IRON_PLATE = addItem(new ItemBase("iron_plate"));
-        GOLD_PLATE = addItem(new ItemBase("gold_plate"));
-        COAL_PLATE = addItem(new ItemBase("coal_plate") {
-            @Override
-            public int getItemBurnTime(ItemStack itemStack) {
-                return 2400;
-            }
-        });
-        DIAMOND_PLATE = addItem(new ItemBase("diamond_plate"));
-        EMERALD_PLATE = addItem(new ItemBase("emerald_plate"));
-        LAPIS_PLATE = addItem(new ItemBase("lapis_plate"));
-        REDSTONE_PLATE = addItem(new ItemBase("redstone_plate"));
+        COPPER_PLATE = registerItem(new ItemBase("copper_plate"));
+        TIN_PLATE = registerItem(new ItemBase("tin_plate"));
+        SILVER_PLATE = registerItem(new ItemBase("silver_plate"));
+        LEAD_PLATE = registerItem(new ItemBase("lead_plate"));
+        ALUMINUM_PLATE = registerItem(new ItemBase("aluminum_plate"));
+        NICKEL_PLATE = registerItem(new ItemBase("nickel_plate"));
+        PLATINUM_PLATE = registerItem(new ItemBase("platinum_plate"));
+        STEEL_PLATE = registerItem(new ItemBase("steel_plate"));
+        ELECTRUM_PLATE = registerItem(new ItemBase("electrum_plate"));
+        BRONZE_PLATE = registerItem(new ItemBase("bronze_plate"));
+        IRON_PLATE = registerItem(new ItemBase("iron_plate"));
+        GOLD_PLATE = registerItem(new ItemBase("gold_plate"));
+        COAL_PLATE = registerItem(new ItemBase("coal_plate"));
+        DIAMOND_PLATE = registerItem(new ItemBase("diamond_plate"));
+        EMERALD_PLATE = registerItem(new ItemBase("emerald_plate"));
+        LAPIS_PLATE = registerItem(new ItemBase("lapis_plate"));
+        REDSTONE_PLATE = registerItem(new ItemBase("redstone_plate"));
     }
     private static void initWires() {
-        COPPER_WIRE = addItem(new ItemBase("copper_wire"));
-        TIN_WIRE = addItem(new ItemBase("tin_wire"));
-        SILVER_WIRE = addItem(new ItemBase("silver_wire"));
-        LEAD_WIRE = addItem(new ItemBase("lead_wire"));
-        ALUMINUM_WIRE = addItem(new ItemBase("aluminum_wire"));
-        NICKEL_WIRE = addItem(new ItemBase("nickel_wire"));
-        PLATINUM_WIRE = addItem(new ItemBase("platinum_wire"));
-        STEEL_WIRE = addItem(new ItemBase("steel_wire"));
-        ELECTRUM_WIRE = addItem(new ItemBase("electrum_wire"));
-        BRONZE_WIRE = addItem(new ItemBase("bronze_wire"));
-        IRON_WIRE = addItem(new ItemBase("iron_wire"));
-        GOLD_WIRE = addItem(new ItemBase("gold_wire"));
-        COAL_WIRE = addItem(new ItemBase("coal_wire") {
-            @Override
-            public int getItemBurnTime(ItemStack itemStack) {
-                return 800;
-            }
-        });
-        DIAMOND_WIRE = addItem(new ItemBase("diamond_wire"));
-        EMERALD_WIRE = addItem(new ItemBase("emerald_wire"));
-        LAPIS_WIRE = addItem(new ItemBase("lapis_wire"));
-        REDSTONE_WIRE = addItem(new ItemBase("redstone_wire"));
+        COPPER_WIRE = registerItem(new ItemBase("copper_wire"));
+        TIN_WIRE = registerItem(new ItemBase("tin_wire"));
+        SILVER_WIRE = registerItem(new ItemBase("silver_wire"));
+        LEAD_WIRE = registerItem(new ItemBase("lead_wire"));
+        ALUMINUM_WIRE = registerItem(new ItemBase("aluminum_wire"));
+        NICKEL_WIRE = registerItem(new ItemBase("nickel_wire"));
+        PLATINUM_WIRE = registerItem(new ItemBase("platinum_wire"));
+        STEEL_WIRE = registerItem(new ItemBase("steel_wire"));
+        ELECTRUM_WIRE = registerItem(new ItemBase("electrum_wire"));
+        BRONZE_WIRE = registerItem(new ItemBase("bronze_wire"));
+        IRON_WIRE = registerItem(new ItemBase("iron_wire"));
+        GOLD_WIRE = registerItem(new ItemBase("gold_wire"));
+        COAL_WIRE = registerItem(new ItemBase("coal_wire"));
+        DIAMOND_WIRE = registerItem(new ItemBase("diamond_wire"));
+        EMERALD_WIRE = registerItem(new ItemBase("emerald_wire"));
+        LAPIS_WIRE = registerItem(new ItemBase("lapis_wire"));
+        REDSTONE_WIRE = registerItem(new ItemBase("redstone_wire"));
     }
     private static void initTools() {
-        COPPER_SWORD = addItem(new SwordBase(Constants.Materials.COPPER_TOOL, "copper_sword"));
-        COPPER_PICKAXE = addItem(new PickaxeBase(Constants.Materials.COPPER_TOOL, "copper_pickaxe"));
-        COPPER_SHOVEL = addItem(new ShovelBase(Constants.Materials.COPPER_TOOL, "copper_shovel"));
-        COPPER_AXE = addItem(new AxeBase(Constants.Materials.COPPER_TOOL, "copper_axe"));
-        COPPER_HOE = addItem(new HoeBase(Constants.Materials.COPPER_TOOL, "copper_hoe"));
+        COPPER_SWORD = registerItem(new SwordBase(Constants.Materials.COPPER_TOOL, "copper_sword"));
+        COPPER_PICKAXE = registerItem(new PickaxeBase(Constants.Materials.COPPER_TOOL, "copper_pickaxe"));
+        COPPER_SHOVEL = registerItem(new ShovelBase(Constants.Materials.COPPER_TOOL, "copper_shovel"));
+        COPPER_AXE = registerItem(new AxeBase(Constants.Materials.COPPER_TOOL, "copper_axe"));
+        COPPER_HOE = registerItem(new HoeBase(Constants.Materials.COPPER_TOOL, "copper_hoe"));
 
-        TIN_SWORD = addItem(new SwordBase(Constants.Materials.TIN_TOOL, "tin_sword"));
-        TIN_PICKAXE = addItem(new PickaxeBase(Constants.Materials.TIN_TOOL, "tin_pickaxe"));
-        TIN_SHOVEL = addItem(new ShovelBase(Constants.Materials.TIN_TOOL, "tin_shovel"));
-        TIN_AXE = addItem(new AxeBase(Constants.Materials.TIN_TOOL, "tin_axe"));
-        TIN_HOE = addItem(new HoeBase(Constants.Materials.TIN_TOOL, "tin_hoe"));
+        TIN_SWORD = registerItem(new SwordBase(Constants.Materials.TIN_TOOL, "tin_sword"));
+        TIN_PICKAXE = registerItem(new PickaxeBase(Constants.Materials.TIN_TOOL, "tin_pickaxe"));
+        TIN_SHOVEL = registerItem(new ShovelBase(Constants.Materials.TIN_TOOL, "tin_shovel"));
+        TIN_AXE = registerItem(new AxeBase(Constants.Materials.TIN_TOOL, "tin_axe"));
+        TIN_HOE = registerItem(new HoeBase(Constants.Materials.TIN_TOOL, "tin_hoe"));
 
-        SILVER_SWORD = addItem(new SwordBase(Constants.Materials.SILVER_TOOL, "silver_sword"));
-        SILVER_PICKAXE = addItem(new PickaxeBase(Constants.Materials.SILVER_TOOL, "silver_pickaxe"));
-        SILVER_SHOVEL = addItem(new ShovelBase(Constants.Materials.SILVER_TOOL, "silver_shovel"));
-        SILVER_AXE = addItem(new AxeBase(Constants.Materials.SILVER_TOOL, "silver_axe"));
-        SILVER_HOE = addItem(new HoeBase(Constants.Materials.SILVER_TOOL, "silver_hoe"));
+        SILVER_SWORD = registerItem(new SwordBase(Constants.Materials.SILVER_TOOL, "silver_sword"));
+        SILVER_PICKAXE = registerItem(new PickaxeBase(Constants.Materials.SILVER_TOOL, "silver_pickaxe"));
+        SILVER_SHOVEL = registerItem(new ShovelBase(Constants.Materials.SILVER_TOOL, "silver_shovel"));
+        SILVER_AXE = registerItem(new AxeBase(Constants.Materials.SILVER_TOOL, "silver_axe"));
+        SILVER_HOE = registerItem(new HoeBase(Constants.Materials.SILVER_TOOL, "silver_hoe"));
 
-        LEAD_SWORD = addItem(new SwordBase(Constants.Materials.LEAD_TOOL, "lead_sword"));
-        LEAD_PICKAXE = addItem(new PickaxeBase(Constants.Materials.LEAD_TOOL, "lead_pickaxe"));
-        LEAD_SHOVEL = addItem(new ShovelBase(Constants.Materials.LEAD_TOOL, "lead_shovel"));
-        LEAD_AXE = addItem(new AxeBase(Constants.Materials.LEAD_TOOL, "lead_axe"));
-        LEAD_HOE = addItem(new HoeBase(Constants.Materials.LEAD_TOOL, "lead_hoe"));
+        LEAD_SWORD = registerItem(new SwordBase(Constants.Materials.LEAD_TOOL, "lead_sword"));
+        LEAD_PICKAXE = registerItem(new PickaxeBase(Constants.Materials.LEAD_TOOL, "lead_pickaxe"));
+        LEAD_SHOVEL = registerItem(new ShovelBase(Constants.Materials.LEAD_TOOL, "lead_shovel"));
+        LEAD_AXE = registerItem(new AxeBase(Constants.Materials.LEAD_TOOL, "lead_axe"));
+        LEAD_HOE = registerItem(new HoeBase(Constants.Materials.LEAD_TOOL, "lead_hoe"));
 
-        ALUMINUM_SWORD = addItem(new SwordBase(Constants.Materials.ALUMINUM_TOOL, "aluminum_sword"));
-        ALUMINUM_PICKAXE = addItem(new PickaxeBase(Constants.Materials.ALUMINUM_TOOL, "aluminum_pickaxe"));
-        ALUMINUM_SHOVEL = addItem(new ShovelBase(Constants.Materials.ALUMINUM_TOOL, "aluminum_shovel"));
-        ALUMINUM_AXE = addItem(new AxeBase(Constants.Materials.ALUMINUM_TOOL, "aluminum_axe"));
-        ALUMINUM_HOE = addItem(new HoeBase(Constants.Materials.ALUMINUM_TOOL, "aluminum_hoe"));
+        ALUMINUM_SWORD = registerItem(new SwordBase(Constants.Materials.ALUMINUM_TOOL, "aluminum_sword"));
+        ALUMINUM_PICKAXE = registerItem(new PickaxeBase(Constants.Materials.ALUMINUM_TOOL, "aluminum_pickaxe"));
+        ALUMINUM_SHOVEL = registerItem(new ShovelBase(Constants.Materials.ALUMINUM_TOOL, "aluminum_shovel"));
+        ALUMINUM_AXE = registerItem(new AxeBase(Constants.Materials.ALUMINUM_TOOL, "aluminum_axe"));
+        ALUMINUM_HOE = registerItem(new HoeBase(Constants.Materials.ALUMINUM_TOOL, "aluminum_hoe"));
 
-        NICKEL_SWORD = addItem(new SwordBase(Constants.Materials.NICKEL_TOOL, "nickel_sword"));
-        NICKEL_PICKAXE = addItem(new PickaxeBase(Constants.Materials.NICKEL_TOOL, "nickel_pickaxe"));
-        NICKEL_SHOVEL = addItem(new ShovelBase(Constants.Materials.NICKEL_TOOL, "nickel_shovel"));
-        NICKEL_AXE = addItem(new AxeBase(Constants.Materials.NICKEL_TOOL, "nickel_axe"));
-        NICKEL_HOE = addItem(new HoeBase(Constants.Materials.NICKEL_TOOL, "nickel_hoe"));
+        NICKEL_SWORD = registerItem(new SwordBase(Constants.Materials.NICKEL_TOOL, "nickel_sword"));
+        NICKEL_PICKAXE = registerItem(new PickaxeBase(Constants.Materials.NICKEL_TOOL, "nickel_pickaxe"));
+        NICKEL_SHOVEL = registerItem(new ShovelBase(Constants.Materials.NICKEL_TOOL, "nickel_shovel"));
+        NICKEL_AXE = registerItem(new AxeBase(Constants.Materials.NICKEL_TOOL, "nickel_axe"));
+        NICKEL_HOE = registerItem(new HoeBase(Constants.Materials.NICKEL_TOOL, "nickel_hoe"));
 
-        PLATINUM_SWORD = addItem(new SwordBase(Constants.Materials.PLATINUM_TOOL, "platinum_sword"));
-        PLATINUM_PICKAXE = addItem(new PickaxeBase(Constants.Materials.PLATINUM_TOOL, "platinum_pickaxe"));
-        PLATINUM_SHOVEL = addItem(new ShovelBase(Constants.Materials.PLATINUM_TOOL, "platinum_shovel"));
-        PLATINUM_AXE = addItem(new AxeBase(Constants.Materials.PLATINUM_TOOL, "platinum_axe"));
-        PLATINUM_HOE = addItem(new HoeBase(Constants.Materials.PLATINUM_TOOL, "platinum_hoe"));
+        PLATINUM_SWORD = registerItem(new SwordBase(Constants.Materials.PLATINUM_TOOL, "platinum_sword"));
+        PLATINUM_PICKAXE = registerItem(new PickaxeBase(Constants.Materials.PLATINUM_TOOL, "platinum_pickaxe"));
+        PLATINUM_SHOVEL = registerItem(new ShovelBase(Constants.Materials.PLATINUM_TOOL, "platinum_shovel"));
+        PLATINUM_AXE = registerItem(new AxeBase(Constants.Materials.PLATINUM_TOOL, "platinum_axe"));
+        PLATINUM_HOE = registerItem(new HoeBase(Constants.Materials.PLATINUM_TOOL, "platinum_hoe"));
 
-        STEEL_SWORD = addItem(new SwordBase(Constants.Materials.STEEL_TOOL, "steel_sword"));
-        STEEL_PICKAXE = addItem(new PickaxeBase(Constants.Materials.STEEL_TOOL, "steel_pickaxe"));
-        STEEL_SHOVEL = addItem(new ShovelBase(Constants.Materials.STEEL_TOOL, "steel_shovel"));
-        STEEL_AXE = addItem(new AxeBase(Constants.Materials.STEEL_TOOL, "steel_axe"));
-        STEEL_HOE = addItem(new HoeBase(Constants.Materials.STEEL_TOOL, "steel_hoe"));
+        STEEL_SWORD = registerItem(new SwordBase(Constants.Materials.STEEL_TOOL, "steel_sword"));
+        STEEL_PICKAXE = registerItem(new PickaxeBase(Constants.Materials.STEEL_TOOL, "steel_pickaxe"));
+        STEEL_SHOVEL = registerItem(new ShovelBase(Constants.Materials.STEEL_TOOL, "steel_shovel"));
+        STEEL_AXE = registerItem(new AxeBase(Constants.Materials.STEEL_TOOL, "steel_axe"));
+        STEEL_HOE = registerItem(new HoeBase(Constants.Materials.STEEL_TOOL, "steel_hoe"));
 
-        ELECTRUM_SWORD = addItem(new SwordBase(Constants.Materials.ELECTRUM_TOOL, "electrum_sword"));
-        ELECTRUM_PICKAXE = addItem(new PickaxeBase(Constants.Materials.ELECTRUM_TOOL, "electrum_pickaxe"));
-        ELECTRUM_SHOVEL = addItem(new ShovelBase(Constants.Materials.ELECTRUM_TOOL, "electrum_shovel"));
-        ELECTRUM_AXE = addItem(new AxeBase(Constants.Materials.ELECTRUM_TOOL, "electrum_axe"));
-        ELECTRUM_HOE = addItem(new HoeBase(Constants.Materials.ELECTRUM_TOOL, "electrum_hoe"));
+        ELECTRUM_SWORD = registerItem(new SwordBase(Constants.Materials.ELECTRUM_TOOL, "electrum_sword"));
+        ELECTRUM_PICKAXE = registerItem(new PickaxeBase(Constants.Materials.ELECTRUM_TOOL, "electrum_pickaxe"));
+        ELECTRUM_SHOVEL = registerItem(new ShovelBase(Constants.Materials.ELECTRUM_TOOL, "electrum_shovel"));
+        ELECTRUM_AXE = registerItem(new AxeBase(Constants.Materials.ELECTRUM_TOOL, "electrum_axe"));
+        ELECTRUM_HOE = registerItem(new HoeBase(Constants.Materials.ELECTRUM_TOOL, "electrum_hoe"));
 
-        BRONZE_SWORD = addItem(new SwordBase(Constants.Materials.BRONZE_TOOL, "bronze_sword"));
-        BRONZE_PICKAXE = addItem(new PickaxeBase(Constants.Materials.BRONZE_TOOL, "bronze_pickaxe"));
-        BRONZE_SHOVEL = addItem(new ShovelBase(Constants.Materials.BRONZE_TOOL, "bronze_shovel"));
-        BRONZE_AXE = addItem(new AxeBase(Constants.Materials.BRONZE_TOOL, "bronze_axe"));
-        BRONZE_HOE = addItem(new HoeBase(Constants.Materials.BRONZE_TOOL, "bronze_hoe"));
+        BRONZE_SWORD = registerItem(new SwordBase(Constants.Materials.BRONZE_TOOL, "bronze_sword"));
+        BRONZE_PICKAXE = registerItem(new PickaxeBase(Constants.Materials.BRONZE_TOOL, "bronze_pickaxe"));
+        BRONZE_SHOVEL = registerItem(new ShovelBase(Constants.Materials.BRONZE_TOOL, "bronze_shovel"));
+        BRONZE_AXE = registerItem(new AxeBase(Constants.Materials.BRONZE_TOOL, "bronze_axe"));
+        BRONZE_HOE = registerItem(new HoeBase(Constants.Materials.BRONZE_TOOL, "bronze_hoe"));
 
-        EMERALD_SWORD = addItem(new SwordBase(Constants.Materials.EMERALD_TOOL, "emerald_sword"));
-        EMERALD_PICKAXE = addItem(new PickaxeBase(Constants.Materials.EMERALD_TOOL, "emerald_pickaxe"));
-        EMERALD_SHOVEL = addItem(new ShovelBase(Constants.Materials.EMERALD_TOOL, "emerald_shovel"));
-        EMERALD_AXE = addItem(new AxeBase(Constants.Materials.EMERALD_TOOL, "emerald_axe"));
-        EMERALD_HOE = addItem(new HoeBase(Constants.Materials.EMERALD_TOOL, "emerald_hoe"));
+        EMERALD_SWORD = registerItem(new SwordBase(Constants.Materials.EMERALD_TOOL, "emerald_sword"));
+        EMERALD_PICKAXE = registerItem(new PickaxeBase(Constants.Materials.EMERALD_TOOL, "emerald_pickaxe"));
+        EMERALD_SHOVEL = registerItem(new ShovelBase(Constants.Materials.EMERALD_TOOL, "emerald_shovel"));
+        EMERALD_AXE = registerItem(new AxeBase(Constants.Materials.EMERALD_TOOL, "emerald_axe"));
+        EMERALD_HOE = registerItem(new HoeBase(Constants.Materials.EMERALD_TOOL, "emerald_hoe"));
 
-        LAPIS_SWORD = addItem(new SwordBase(Constants.Materials.LAPIS_TOOL, "lapis_sword"));
-        LAPIS_PICKAXE = addItem(new PickaxeBase(Constants.Materials.LAPIS_TOOL, "lapis_pickaxe"));
-        LAPIS_SHOVEL = addItem(new ShovelBase(Constants.Materials.LAPIS_TOOL, "lapis_shovel"));
-        LAPIS_AXE = addItem(new AxeBase(Constants.Materials.LAPIS_TOOL, "lapis_axe"));
-        LAPIS_HOE = addItem(new HoeBase(Constants.Materials.LAPIS_TOOL, "lapis_hoe"));
+        LAPIS_SWORD = registerItem(new SwordBase(Constants.Materials.LAPIS_TOOL, "lapis_sword"));
+        LAPIS_PICKAXE = registerItem(new PickaxeBase(Constants.Materials.LAPIS_TOOL, "lapis_pickaxe"));
+        LAPIS_SHOVEL = registerItem(new ShovelBase(Constants.Materials.LAPIS_TOOL, "lapis_shovel"));
+        LAPIS_AXE = registerItem(new AxeBase(Constants.Materials.LAPIS_TOOL, "lapis_axe"));
+        LAPIS_HOE = registerItem(new HoeBase(Constants.Materials.LAPIS_TOOL, "lapis_hoe"));
 
-        REDSTONE_SWORD = addItem(new SwordBase(Constants.Materials.REDSTONE_TOOL, "redstone_sword"));
-        REDSTONE_PICKAXE = addItem(new PickaxeBase(Constants.Materials.REDSTONE_TOOL, "redstone_pickaxe"));
-        REDSTONE_SHOVEL = addItem(new ShovelBase(Constants.Materials.REDSTONE_TOOL, "redstone_shovel"));
-        REDSTONE_AXE = addItem(new AxeBase(Constants.Materials.REDSTONE_TOOL, "redstone_axe"));
-        REDSTONE_HOE = addItem(new HoeBase(Constants.Materials.REDSTONE_TOOL, "redstone_hoe"));
+        REDSTONE_SWORD = registerItem(new SwordBase(Constants.Materials.REDSTONE_TOOL, "redstone_sword"));
+        REDSTONE_PICKAXE = registerItem(new PickaxeBase(Constants.Materials.REDSTONE_TOOL, "redstone_pickaxe"));
+        REDSTONE_SHOVEL = registerItem(new ShovelBase(Constants.Materials.REDSTONE_TOOL, "redstone_shovel"));
+        REDSTONE_AXE = registerItem(new AxeBase(Constants.Materials.REDSTONE_TOOL, "redstone_axe"));
+        REDSTONE_HOE = registerItem(new HoeBase(Constants.Materials.REDSTONE_TOOL, "redstone_hoe"));
     }
     private static void initArmor() {
-        COPPER_HELMET = addItem(new ArmorBase(Constants.Materials.COPPER_ARMOR, EntityEquipmentSlot.HEAD, "copper_helmet"));
-        COPPER_CHESTPLATE = addItem(new ArmorBase(Constants.Materials.COPPER_ARMOR, EntityEquipmentSlot.CHEST, "copper_chestplate"));
-        COPPER_LEGGINGS = addItem(new ArmorBase(Constants.Materials.COPPER_ARMOR, EntityEquipmentSlot.LEGS, "copper_leggings"));
-        COPPER_BOOTS = addItem(new ArmorBase(Constants.Materials.COPPER_ARMOR, EntityEquipmentSlot.FEET, "copper_boots"));
+        COPPER_HELMET = registerItem(new ArmorBase(Constants.Materials.COPPER_ARMOR, EntityEquipmentSlot.HEAD, "copper_helmet"));
+        COPPER_CHESTPLATE = registerItem(new ArmorBase(Constants.Materials.COPPER_ARMOR, EntityEquipmentSlot.CHEST, "copper_chestplate"));
+        COPPER_LEGGINGS = registerItem(new ArmorBase(Constants.Materials.COPPER_ARMOR, EntityEquipmentSlot.LEGS, "copper_leggings"));
+        COPPER_BOOTS = registerItem(new ArmorBase(Constants.Materials.COPPER_ARMOR, EntityEquipmentSlot.FEET, "copper_boots"));
 
-        TIN_HELMET = addItem(new ArmorBase(Constants.Materials.TIN_ARMOR, EntityEquipmentSlot.HEAD, "tin_helmet"));
-        TIN_CHESTPLATE = addItem(new ArmorBase(Constants.Materials.TIN_ARMOR, EntityEquipmentSlot.CHEST, "tin_chestplate"));
-        TIN_LEGGINGS = addItem(new ArmorBase(Constants.Materials.TIN_ARMOR, EntityEquipmentSlot.LEGS, "tin_leggings"));
-        TIN_BOOTS = addItem(new ArmorBase(Constants.Materials.TIN_ARMOR, EntityEquipmentSlot.FEET, "tin_boots"));
+        TIN_HELMET = registerItem(new ArmorBase(Constants.Materials.TIN_ARMOR, EntityEquipmentSlot.HEAD, "tin_helmet"));
+        TIN_CHESTPLATE = registerItem(new ArmorBase(Constants.Materials.TIN_ARMOR, EntityEquipmentSlot.CHEST, "tin_chestplate"));
+        TIN_LEGGINGS = registerItem(new ArmorBase(Constants.Materials.TIN_ARMOR, EntityEquipmentSlot.LEGS, "tin_leggings"));
+        TIN_BOOTS = registerItem(new ArmorBase(Constants.Materials.TIN_ARMOR, EntityEquipmentSlot.FEET, "tin_boots"));
 
-        SILVER_HELMET = addItem(new ArmorBase(Constants.Materials.SILVER_ARMOR, EntityEquipmentSlot.HEAD, "silver_helmet"));
-        SILVER_CHESTPLATE = addItem(new ArmorBase(Constants.Materials.SILVER_ARMOR, EntityEquipmentSlot.CHEST, "silver_chestplate"));
-        SILVER_LEGGINGS = addItem(new ArmorBase(Constants.Materials.SILVER_ARMOR, EntityEquipmentSlot.LEGS, "silver_leggings"));
-        SILVER_BOOTS = addItem(new ArmorBase(Constants.Materials.SILVER_ARMOR, EntityEquipmentSlot.FEET, "silver_boots"));
+        SILVER_HELMET = registerItem(new ArmorBase(Constants.Materials.SILVER_ARMOR, EntityEquipmentSlot.HEAD, "silver_helmet"));
+        SILVER_CHESTPLATE = registerItem(new ArmorBase(Constants.Materials.SILVER_ARMOR, EntityEquipmentSlot.CHEST, "silver_chestplate"));
+        SILVER_LEGGINGS = registerItem(new ArmorBase(Constants.Materials.SILVER_ARMOR, EntityEquipmentSlot.LEGS, "silver_leggings"));
+        SILVER_BOOTS = registerItem(new ArmorBase(Constants.Materials.SILVER_ARMOR, EntityEquipmentSlot.FEET, "silver_boots"));
 
-        LEAD_HELMET = addItem(new ArmorBase(Constants.Materials.LEAD_ARMOR, EntityEquipmentSlot.HEAD, "lead_helmet"));
-        LEAD_CHESTPLATE = addItem(new ArmorBase(Constants.Materials.LEAD_ARMOR, EntityEquipmentSlot.CHEST, "lead_chestplate"));
-        LEAD_LEGGINGS = addItem(new ArmorBase(Constants.Materials.LEAD_ARMOR, EntityEquipmentSlot.LEGS, "lead_leggings"));
-        LEAD_BOOTS = addItem(new ArmorBase(Constants.Materials.LEAD_ARMOR, EntityEquipmentSlot.FEET, "lead_boots"));
+        LEAD_HELMET = registerItem(new ArmorBase(Constants.Materials.LEAD_ARMOR, EntityEquipmentSlot.HEAD, "lead_helmet"));
+        LEAD_CHESTPLATE = registerItem(new ArmorBase(Constants.Materials.LEAD_ARMOR, EntityEquipmentSlot.CHEST, "lead_chestplate"));
+        LEAD_LEGGINGS = registerItem(new ArmorBase(Constants.Materials.LEAD_ARMOR, EntityEquipmentSlot.LEGS, "lead_leggings"));
+        LEAD_BOOTS = registerItem(new ArmorBase(Constants.Materials.LEAD_ARMOR, EntityEquipmentSlot.FEET, "lead_boots"));
 
-        ALUMINUM_HELMET = addItem(new ArmorBase(Constants.Materials.ALUMINUM_ARMOR, EntityEquipmentSlot.HEAD, "aluminum_helmet"));
-        ALUMINUM_CHESTPLATE = addItem(new ArmorBase(Constants.Materials.ALUMINUM_ARMOR, EntityEquipmentSlot.CHEST, "aluminum_chestplate"));
-        ALUMINUM_LEGGINGS = addItem(new ArmorBase(Constants.Materials.ALUMINUM_ARMOR, EntityEquipmentSlot.LEGS, "aluminum_leggings"));
-        ALUMINUM_BOOTS = addItem(new ArmorBase(Constants.Materials.ALUMINUM_ARMOR, EntityEquipmentSlot.FEET, "aluminum_boots"));
+        ALUMINUM_HELMET = registerItem(new ArmorBase(Constants.Materials.ALUMINUM_ARMOR, EntityEquipmentSlot.HEAD, "aluminum_helmet"));
+        ALUMINUM_CHESTPLATE = registerItem(new ArmorBase(Constants.Materials.ALUMINUM_ARMOR, EntityEquipmentSlot.CHEST, "aluminum_chestplate"));
+        ALUMINUM_LEGGINGS = registerItem(new ArmorBase(Constants.Materials.ALUMINUM_ARMOR, EntityEquipmentSlot.LEGS, "aluminum_leggings"));
+        ALUMINUM_BOOTS = registerItem(new ArmorBase(Constants.Materials.ALUMINUM_ARMOR, EntityEquipmentSlot.FEET, "aluminum_boots"));
 
-        NICKEL_HELMET = addItem(new ArmorBase(Constants.Materials.NICKEL_ARMOR, EntityEquipmentSlot.HEAD, "nickel_helmet"));
-        NICKEL_CHESTPLATE = addItem(new ArmorBase(Constants.Materials.NICKEL_ARMOR, EntityEquipmentSlot.CHEST, "nickel_chestplate"));
-        NICKEL_LEGGINGS = addItem(new ArmorBase(Constants.Materials.NICKEL_ARMOR, EntityEquipmentSlot.LEGS, "nickel_leggings"));
-        NICKEL_BOOTS = addItem(new ArmorBase(Constants.Materials.NICKEL_ARMOR, EntityEquipmentSlot.FEET, "nickel_boots"));
+        NICKEL_HELMET = registerItem(new ArmorBase(Constants.Materials.NICKEL_ARMOR, EntityEquipmentSlot.HEAD, "nickel_helmet"));
+        NICKEL_CHESTPLATE = registerItem(new ArmorBase(Constants.Materials.NICKEL_ARMOR, EntityEquipmentSlot.CHEST, "nickel_chestplate"));
+        NICKEL_LEGGINGS = registerItem(new ArmorBase(Constants.Materials.NICKEL_ARMOR, EntityEquipmentSlot.LEGS, "nickel_leggings"));
+        NICKEL_BOOTS = registerItem(new ArmorBase(Constants.Materials.NICKEL_ARMOR, EntityEquipmentSlot.FEET, "nickel_boots"));
 
-        PLATINUM_HELMET = addItem(new ArmorBase(Constants.Materials.PLATINUM_ARMOR, EntityEquipmentSlot.HEAD, "platinum_helmet"));
-        PLATINUM_CHESTPLATE = addItem(new ArmorBase(Constants.Materials.PLATINUM_ARMOR, EntityEquipmentSlot.CHEST, "platinum_chestplate"));
-        PLATINUM_LEGGINGS = addItem(new ArmorBase(Constants.Materials.PLATINUM_ARMOR, EntityEquipmentSlot.LEGS, "platinum_leggings"));
-        PLATINUM_BOOTS = addItem(new ArmorBase(Constants.Materials.PLATINUM_ARMOR, EntityEquipmentSlot.FEET, "platinum_boots"));
+        PLATINUM_HELMET = registerItem(new ArmorBase(Constants.Materials.PLATINUM_ARMOR, EntityEquipmentSlot.HEAD, "platinum_helmet"));
+        PLATINUM_CHESTPLATE = registerItem(new ArmorBase(Constants.Materials.PLATINUM_ARMOR, EntityEquipmentSlot.CHEST, "platinum_chestplate"));
+        PLATINUM_LEGGINGS = registerItem(new ArmorBase(Constants.Materials.PLATINUM_ARMOR, EntityEquipmentSlot.LEGS, "platinum_leggings"));
+        PLATINUM_BOOTS = registerItem(new ArmorBase(Constants.Materials.PLATINUM_ARMOR, EntityEquipmentSlot.FEET, "platinum_boots"));
 
-        STEEL_HELMET = addItem(new ArmorBase(Constants.Materials.STEEL_ARMOR, EntityEquipmentSlot.HEAD, "steel_helmet"));
-        STEEL_CHESTPLATE = addItem(new ArmorBase(Constants.Materials.STEEL_ARMOR, EntityEquipmentSlot.CHEST, "steel_chestplate"));
-        STEEL_LEGGINGS = addItem(new ArmorBase(Constants.Materials.STEEL_ARMOR, EntityEquipmentSlot.LEGS, "steel_leggings"));
-        STEEL_BOOTS = addItem(new ArmorBase(Constants.Materials.STEEL_ARMOR, EntityEquipmentSlot.FEET, "steel_boots"));
+        STEEL_HELMET = registerItem(new ArmorBase(Constants.Materials.STEEL_ARMOR, EntityEquipmentSlot.HEAD, "steel_helmet"));
+        STEEL_CHESTPLATE = registerItem(new ArmorBase(Constants.Materials.STEEL_ARMOR, EntityEquipmentSlot.CHEST, "steel_chestplate"));
+        STEEL_LEGGINGS = registerItem(new ArmorBase(Constants.Materials.STEEL_ARMOR, EntityEquipmentSlot.LEGS, "steel_leggings"));
+        STEEL_BOOTS = registerItem(new ArmorBase(Constants.Materials.STEEL_ARMOR, EntityEquipmentSlot.FEET, "steel_boots"));
 
-        ELECTRUM_HELMET = addItem(new ArmorBase(Constants.Materials.ELECTRUM_ARMOR, EntityEquipmentSlot.HEAD, "electrum_helmet"));
-        ELECTRUM_CHESTPLATE = addItem(new ArmorBase(Constants.Materials.ELECTRUM_ARMOR, EntityEquipmentSlot.CHEST, "electrum_chestplate"));
-        ELECTRUM_LEGGINGS = addItem(new ArmorBase(Constants.Materials.ELECTRUM_ARMOR, EntityEquipmentSlot.LEGS, "electrum_leggings"));
-        ELECTRUM_BOOTS = addItem(new ArmorBase(Constants.Materials.ELECTRUM_ARMOR, EntityEquipmentSlot.FEET, "electrum_boots"));
+        ELECTRUM_HELMET = registerItem(new ArmorBase(Constants.Materials.ELECTRUM_ARMOR, EntityEquipmentSlot.HEAD, "electrum_helmet"));
+        ELECTRUM_CHESTPLATE = registerItem(new ArmorBase(Constants.Materials.ELECTRUM_ARMOR, EntityEquipmentSlot.CHEST, "electrum_chestplate"));
+        ELECTRUM_LEGGINGS = registerItem(new ArmorBase(Constants.Materials.ELECTRUM_ARMOR, EntityEquipmentSlot.LEGS, "electrum_leggings"));
+        ELECTRUM_BOOTS = registerItem(new ArmorBase(Constants.Materials.ELECTRUM_ARMOR, EntityEquipmentSlot.FEET, "electrum_boots"));
 
-        BRONZE_HELMET = addItem(new ArmorBase(Constants.Materials.BRONZE_ARMOR, EntityEquipmentSlot.HEAD, "bronze_helmet"));
-        BRONZE_CHESTPLATE = addItem(new ArmorBase(Constants.Materials.BRONZE_ARMOR, EntityEquipmentSlot.CHEST, "bronze_chestplate"));
-        BRONZE_LEGGINGS = addItem(new ArmorBase(Constants.Materials.BRONZE_ARMOR, EntityEquipmentSlot.LEGS, "bronze_leggings"));
-        BRONZE_BOOTS = addItem(new ArmorBase(Constants.Materials.BRONZE_ARMOR, EntityEquipmentSlot.FEET, "bronze_boots"));
+        BRONZE_HELMET = registerItem(new ArmorBase(Constants.Materials.BRONZE_ARMOR, EntityEquipmentSlot.HEAD, "bronze_helmet"));
+        BRONZE_CHESTPLATE = registerItem(new ArmorBase(Constants.Materials.BRONZE_ARMOR, EntityEquipmentSlot.CHEST, "bronze_chestplate"));
+        BRONZE_LEGGINGS = registerItem(new ArmorBase(Constants.Materials.BRONZE_ARMOR, EntityEquipmentSlot.LEGS, "bronze_leggings"));
+        BRONZE_BOOTS = registerItem(new ArmorBase(Constants.Materials.BRONZE_ARMOR, EntityEquipmentSlot.FEET, "bronze_boots"));
 
-        EMERALD_HELMET = addItem(new ArmorBase(Constants.Materials.EMERALD_ARMOR, EntityEquipmentSlot.HEAD, "emerald_helmet"));
-        EMERALD_CHESTPLATE = addItem(new ArmorBase(Constants.Materials.EMERALD_ARMOR, EntityEquipmentSlot.CHEST, "emerald_chestplate"));
-        EMERALD_LEGGINGS = addItem(new ArmorBase(Constants.Materials.EMERALD_ARMOR, EntityEquipmentSlot.LEGS, "emerald_leggings"));
-        EMERALD_BOOTS = addItem(new ArmorBase(Constants.Materials.EMERALD_ARMOR, EntityEquipmentSlot.FEET, "emerald_boots"));
+        EMERALD_HELMET = registerItem(new ArmorBase(Constants.Materials.EMERALD_ARMOR, EntityEquipmentSlot.HEAD, "emerald_helmet"));
+        EMERALD_CHESTPLATE = registerItem(new ArmorBase(Constants.Materials.EMERALD_ARMOR, EntityEquipmentSlot.CHEST, "emerald_chestplate"));
+        EMERALD_LEGGINGS = registerItem(new ArmorBase(Constants.Materials.EMERALD_ARMOR, EntityEquipmentSlot.LEGS, "emerald_leggings"));
+        EMERALD_BOOTS = registerItem(new ArmorBase(Constants.Materials.EMERALD_ARMOR, EntityEquipmentSlot.FEET, "emerald_boots"));
 
-        LAPIS_HELMET = addItem(new ArmorBase(Constants.Materials.LAPIS_ARMOR, EntityEquipmentSlot.HEAD, "lapis_helmet"));
-        LAPIS_CHESTPLATE = addItem(new ArmorBase(Constants.Materials.LAPIS_ARMOR, EntityEquipmentSlot.CHEST, "lapis_chestplate"));
-        LAPIS_LEGGINGS = addItem(new ArmorBase(Constants.Materials.LAPIS_ARMOR, EntityEquipmentSlot.LEGS, "lapis_leggings"));
-        LAPIS_BOOTS = addItem(new ArmorBase(Constants.Materials.LAPIS_ARMOR, EntityEquipmentSlot.FEET, "lapis_boots"));
+        LAPIS_HELMET = registerItem(new ArmorBase(Constants.Materials.LAPIS_ARMOR, EntityEquipmentSlot.HEAD, "lapis_helmet"));
+        LAPIS_CHESTPLATE = registerItem(new ArmorBase(Constants.Materials.LAPIS_ARMOR, EntityEquipmentSlot.CHEST, "lapis_chestplate"));
+        LAPIS_LEGGINGS = registerItem(new ArmorBase(Constants.Materials.LAPIS_ARMOR, EntityEquipmentSlot.LEGS, "lapis_leggings"));
+        LAPIS_BOOTS = registerItem(new ArmorBase(Constants.Materials.LAPIS_ARMOR, EntityEquipmentSlot.FEET, "lapis_boots"));
 
-        REDSTONE_HELMET = addItem(new ArmorBase(Constants.Materials.REDSTONE_ARMOR, EntityEquipmentSlot.HEAD, "redstone_helmet"));
-        REDSTONE_CHESTPLATE = addItem(new ArmorBase(Constants.Materials.REDSTONE_ARMOR, EntityEquipmentSlot.CHEST, "redstone_chestplate"));
-        REDSTONE_LEGGINGS = addItem(new ArmorBase(Constants.Materials.REDSTONE_ARMOR, EntityEquipmentSlot.LEGS, "redstone_leggings"));
-        REDSTONE_BOOTS = addItem(new ArmorBase(Constants.Materials.REDSTONE_ARMOR, EntityEquipmentSlot.FEET, "redstone_boots"));
+        REDSTONE_HELMET = registerItem(new ArmorBase(Constants.Materials.REDSTONE_ARMOR, EntityEquipmentSlot.HEAD, "redstone_helmet"));
+        REDSTONE_CHESTPLATE = registerItem(new ArmorBase(Constants.Materials.REDSTONE_ARMOR, EntityEquipmentSlot.CHEST, "redstone_chestplate"));
+        REDSTONE_LEGGINGS = registerItem(new ArmorBase(Constants.Materials.REDSTONE_ARMOR, EntityEquipmentSlot.LEGS, "redstone_leggings"));
+        REDSTONE_BOOTS = registerItem(new ArmorBase(Constants.Materials.REDSTONE_ARMOR, EntityEquipmentSlot.FEET, "redstone_boots"));
     }
 
-    @SideOnly(Side.CLIENT)
-    private static void initModels() {
-
-    }
-
-    @SubscribeEvent
-    public static void registerItems(RegistryEvent.Register<Item> event) {
-        event.getRegistry().registerAll(getItems());
-    }
-    @SubscribeEvent
-    public static void registerModels(ModelRegistryEvent event) {
-        ModItems.initModels();
-        for (Item item : getItems()) {
-            if (item.getRegistryName() != null)
-                ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
-        }
+    public static <T extends Item> Item registerItem(T item) {
+        addItem(item);
+        GameRegistry.register(item);
+        if (item.getRegistryName() != null)
+            ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
+        return item;
     }
 }

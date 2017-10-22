@@ -1,8 +1,8 @@
 package terrails.ingotter.world;
 
 import net.minecraft.world.World;
+import net.minecraft.world.chunk.IChunkGenerator;
 import net.minecraft.world.chunk.IChunkProvider;
-import net.minecraft.world.gen.IChunkGenerator;
 import net.minecraftforge.event.terraingen.OreGenEvent;
 import net.minecraftforge.fml.common.IWorldGenerator;
 import net.minecraftforge.fml.common.Mod;
@@ -98,5 +98,6 @@ public class OreGenerator extends CustomOreGenerator implements IWorldGenerator 
     @Override
     public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) {
         generateOre(ConfigHandler.generate && ConfigHandler.ores, ConfigHandler.generationArray, random, chunkX, chunkZ, world, chunkGenerator, chunkProvider);
+
     }
 }
