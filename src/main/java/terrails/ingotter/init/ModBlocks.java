@@ -90,7 +90,8 @@ public class ModBlocks extends BlockRegistry {
         }
 
         for (Block block : getBlocks()) {
-            block.setCreativeTab(Constants.RESOURCES_TAB);
+            if (block.getRegistryName() != null && block.getRegistryName().getResourceDomain().contains(Constants.MOD_ID))
+                block.setCreativeTab(Constants.RESOURCES_TAB);
         }
     }
     
