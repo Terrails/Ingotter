@@ -33,7 +33,7 @@ public class ModToolsCreativeTab extends CreativeTabs {
     public void displayAllRelevantItems(@Nonnull NonNullList<ItemStack> list) {
         this.list = list;
 
-        if(ConfigHandler.tools) {
+        if(ConfigHandler.wireHammer) {
             this.add(ModItems.HAMMER);
             this.add(ModItems.WIRE_CUTTERS);
         }
