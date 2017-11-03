@@ -24,7 +24,12 @@ public class ModToolsCreativeTab extends CreativeTabs {
     @Override
     @Nonnull
     public ItemStack getTabIconItem() {
-        return new ItemStack(ModItems.HAMMER);
+        if (ConfigHandler.wireHammer)
+            return new ItemStack(ModItems.HAMMER);
+        else if (ConfigHandler.tools)
+            return new ItemStack(ModItems.BRONZE_SWORD);
+        else
+            return new ItemStack(ModItems.BRONZE_HELMET);
     }
 
 

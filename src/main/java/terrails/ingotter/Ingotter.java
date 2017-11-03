@@ -32,8 +32,8 @@ public class Ingotter {
     public void preInit(FMLPreInitializationEvent event) {
         proxy.preInit(event);
         ConfigHandler.init(event.getModConfigurationDirectory());
-        ModItems.init();
         ModBlocks.init();
+        ModItems.init();
 
         MinecraftForge.ORE_GEN_BUS.register(new OreGenerator());
         GameRegistry.registerWorldGenerator(new OreGenerator(), 0);

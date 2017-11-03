@@ -234,8 +234,10 @@ public class ModItems extends ItemRegistry {
     public static Item REDSTONE_BOOTS;
 
     public static void init() {
-        HAMMER = addItem(new ItemCraftingDurabilityBase("hammer", 128, true).setCreativeTab(Constants.TOOLS_TAB));
-        WIRE_CUTTERS = addItem(new ItemCraftingDurabilityBase("wire_cutters", 128, true).setCreativeTab(Constants.TOOLS_TAB));
+        if (ConfigHandler.wireHammer) {
+            HAMMER = addItem(new ItemCraftingDurabilityBase("hammer", 128, true).setCreativeTab(Constants.TOOLS_TAB));
+            WIRE_CUTTERS = addItem(new ItemCraftingDurabilityBase("wire_cutters", 128, true).setCreativeTab(Constants.TOOLS_TAB));
+        }
 
         initIngots();
         if (ConfigHandler.plates)
