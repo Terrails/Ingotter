@@ -15,6 +15,7 @@ public class ConfigHandler {
     public static final String FEATURES = "Features";
     public static final String GENERATION = "Generation";
 
+    public static boolean wireHammer;
     public static boolean tools;
     public static boolean ores;
     public static boolean plates;
@@ -38,6 +39,7 @@ public class ConfigHandler {
     }
 
     public static void syncConfig() {
+        wireHammer = config.get(FEATURES, "Wire Cutters & Hammer", true).getBoolean();
         tools = config.get(FEATURES, "Tools", true).getBoolean();
         ores = config.get(FEATURES, "Ores", true).getBoolean();
         plates = config.get(FEATURES, "Plates", true).getBoolean();
