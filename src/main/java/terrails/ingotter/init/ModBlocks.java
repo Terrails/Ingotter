@@ -152,6 +152,7 @@ public class ModBlocks extends BlockRegistry {
             if (block.getRegistryName() != null)
                 event.getRegistry().register(new ItemBlock(block).setRegistryName(block.getRegistryName()));
         }
+        ModOreDictionary.initBlocks();
     }
     @SubscribeEvent
     public static void registerModels(ModelRegistryEvent event) {

@@ -3,13 +3,14 @@ package terrails.ingotter.init;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.oredict.OreDictionary;
 import terrails.ingotter.config.ConfigHandler;
 
 public class ModOreDictionary {
 
-    public static void init() {
-
+    public static void initBlocks() {
         if (ConfigHandler.ores) {
             add("oreCopper", ModBlocks.COPPER_ORE, ModBlocks.COPPER_NETHER_ORE, ModBlocks.COPPER_END_ORE);
             add("oreTin", ModBlocks.TIN_ORE, ModBlocks.TIN_NETHER_ORE, ModBlocks.TIN_END_ORE);
@@ -29,6 +30,18 @@ public class ModOreDictionary {
             add("oreCoal", ModBlocks.COAL_NETHER_ORE, ModBlocks.COAL_END_ORE);
         }
 
+        add("blockCopper", ModBlocks.COPPER);
+        add("blockTin", ModBlocks.TIN);
+        add("blockSilver", ModBlocks.SILVER);
+        add("blockLead", ModBlocks.LEAD);
+        add(ModBlocks.ALUMINUM, "blockAluminum", "blockAluminium");
+        add(ModBlocks.NICKEL, "blockNickel", "blockFerrous");
+        add("blockPlatinum", ModBlocks.PLATINUM);
+        add("blockSteel", ModBlocks.STEEL);
+        add("blockElectrum", ModBlocks.ELECTRUM);
+        add("blockBronze", ModBlocks.BRONZE);
+    }
+    public static void initItems() {
         add("nuggetCopper", ModItems.COPPER_NUGGET);
         add("nuggetTin", ModItems.TIN_NUGGET);
         add("nuggetSilver", ModItems.SILVER_NUGGET);
@@ -57,17 +70,6 @@ public class ModOreDictionary {
         add("ingotElectrum", ModItems.ELECTRUM_INGOT);
         add("ingotBronze", ModItems.BRONZE_INGOT);
 
-        add("blockCopper", ModBlocks.COPPER);
-        add("blockTin", ModBlocks.TIN);
-        add("blockSilver", ModBlocks.SILVER);
-        add("blockLead", ModBlocks.LEAD);
-        add(ModBlocks.ALUMINUM, "blockAluminum", "blockAluminium");
-        add(ModBlocks.NICKEL, "blockNickel", "blockFerrous");
-        add("blockPlatinum", ModBlocks.PLATINUM);
-        add("blockSteel", ModBlocks.STEEL);
-        add("blockElectrum", ModBlocks.ELECTRUM);
-        add("blockBronze", ModBlocks.BRONZE);
-        
         if (ConfigHandler.dusts) {
             add("dustCopper", ModItems.COPPER_DUST);
             add("dustTin", ModItems.TIN_DUST);

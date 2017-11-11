@@ -535,6 +535,7 @@ public class ModItems extends ItemRegistry {
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event) {
         event.getRegistry().registerAll(getItems());
+        ModOreDictionary.initItems();
     }
     @SubscribeEvent
     public static void registerModels(ModelRegistryEvent event) {
