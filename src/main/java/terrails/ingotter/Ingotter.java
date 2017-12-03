@@ -17,7 +17,7 @@ import terrails.ingotter.world.OreGenerator;
         "required-after:ore_controller@[" + Constants.ORE_CONTROLLER_VERSION + ",);",
         modid = Constants.MOD_ID,
         name = Constants.MOD_NAME,
-        version = Constants.MOD_VERSION,
+        version = Constants.VERSION,
         acceptedMinecraftVersions = Constants.MC_VERSION,
         guiFactory = Constants.GUI_FACTORY
         )

@@ -24,11 +24,7 @@ minecraft {
     runDir = "run"
 }
 
-repositories {
-    mavenLocal()
-}
 dependencies {
-    compile 'terrails:TerraCore:1.12.2-2.1.4'
 }
 
 processResources {
@@ -52,7 +48,7 @@ String getVersions(String type) {
     String revision = "0"
     String patch = "0"
     String prefix = "public static final String $type = \""
-    File file = file("src/main/java/terrails/terracore/Constants.java")
+    File file = file("src/main/java/terrails/ingotter/Constants.java")
     file.eachLine { String s ->
         s = s.trim()
         if (s.startsWith(prefix)) {
