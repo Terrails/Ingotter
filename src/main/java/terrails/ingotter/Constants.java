@@ -17,7 +17,7 @@ public class Constants {
     public static final String MOD_ID = "ingotter";
     public static final String MOD_NAME = "Ingotter";
 
-    public static final String MOD_VERSION = "@VERSION@";
+    public static final String VERSION = "2.0.3";
     public static final String TERRACORE_VERSION = "2.1.3";
     public static final String ORE_CONTROLLER_VERSION = "1.0.0";
     public static final String MC_VERSION = "[1.12],[1.12.1],[1.12.2]";
