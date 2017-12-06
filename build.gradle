@@ -25,6 +25,8 @@ minecraft {
 }
 
 dependencies {
+    compile project(':TerraCore')
+    compile project(':OreController')
 }
 
 processResources {
