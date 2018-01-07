@@ -1,0 +1,11 @@
+{
+  "conditions": {
+    "crafting_tools": "terrails.ingotter.recipes.ConditionFactory",
+    "tools": "terrails.ingotter.recipes.ConditionFactory",
+    "ores": "terrails.ingotter.recipes.ConditionFactory",
+    "plates": "terrails.ingotter.recipes.ConditionFactory",
+    "dusts": "terrails.ingotter.recipes.ConditionFactory",
+    "wires": "terrails.ingotter.recipes.ConditionFactory",
+    "armor": "terrails.ingotter.recipes.ConditionFactory"
+  }
+}

@@ -5,6 +5,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import terrails.ingotter.Constants;
 
 import javax.annotation.Nullable;
 import java.util.Random;
@@ -20,6 +21,7 @@ public class BlockOreCustomDrop extends BlockOreBase {
 
     public BlockOreCustomDrop(String name, Item drop, int miningLevel, float lightLevel) {
         super(name, miningLevel, lightLevel);
+        setCreativeTab(Constants.RESOURCES_TAB);
         this.drop = drop;
     }
 

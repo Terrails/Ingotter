@@ -2,6 +2,7 @@ package terrails.ingotter.blocks;
 
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
+import terrails.ingotter.Constants;
 import terrails.terracore.block.BlockBase;
 
 public class BlockOreBase extends BlockBase {
@@ -11,6 +12,7 @@ public class BlockOreBase extends BlockBase {
         setHarvestLevel("pickaxe", harvestLevel);
         setHardness(3f);
         setResistance(5f);
+        setCreativeTab(Constants.RESOURCES_TAB);
     }
 
     public BlockOreBase(String name, int harvestLevel) {

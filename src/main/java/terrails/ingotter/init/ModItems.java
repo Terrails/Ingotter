@@ -239,12 +239,15 @@ public class ModItems extends ItemRegistry {
             WIRE_CUTTERS = addItem(new ItemCraftingDurabilityBase("wire_cutters", 128, true).setCreativeTab(Constants.TOOLS_TAB));
         }
 
-        initIngots();
+        if (ConfigHandler.ingots)
+            initIngots();
+
         if (ConfigHandler.plates)
             initPlates();
 
         if (ConfigHandler.wires)
             initWires();
+
 
         initNuggets();
 
@@ -258,19 +261,21 @@ public class ModItems extends ItemRegistry {
             initTools();
 
         for (Item item : getItems()) {
-            if (item.getUnlocalizedName().contains("_helmet") || item.getUnlocalizedName().contains("_chestplate") || item.getUnlocalizedName().contains("_leggings") || item.getUnlocalizedName().contains("_boots")) {
+            String name = item.getUnlocalizedName();
+            if (ConfigHandler.armor && (name.contains("_helmet") || name.contains("_chestplate") || name.contains("_leggings") || name.contains("_boots")))
                 item.setCreativeTab(Constants.TOOLS_TAB);
-            } else if (item.getUnlocalizedName().contains("_sword") || item.getUnlocalizedName().contains("_pickaxe") || item.getUnlocalizedName().contains("_axe") || item.getUnlocalizedName().contains("_shovel") || item.getUnlocalizedName().contains("_hoe")) {
+            else if (ConfigHandler.tools && (name.contains("_sword") || name.contains("_pickaxe") || name.contains("_axe") || name.contains("_shovel") || name.contains("_hoe")))
                 item.setCreativeTab(Constants.TOOLS_TAB);
-            } else if (item.getUnlocalizedName().contains("_ingot") || item.getUnlocalizedName().contains("_nugget")) {
+            else if (ConfigHandler.ingots && name.contains("_ingot"))
                 item.setCreativeTab(Constants.RESOURCES_TAB);
-            } else if (ConfigHandler.plates && item.getUnlocalizedName().contains("_plate")) {
+            else if ((ConfigHandler.gemNuggets || ConfigHandler.ingotNuggets) && name.contains("_nugget"))
                 item.setCreativeTab(Constants.RESOURCES_TAB);
-            } else if (ConfigHandler.wires && item.getUnlocalizedName().contains("_wire")) {
+            else if (ConfigHandler.plates && name.contains("_plate"))
                 item.setCreativeTab(Constants.RESOURCES_TAB);
-            } else if (ConfigHandler.dusts && item.getUnlocalizedName().contains("_dust")) {
+            else if (ConfigHandler.wires && name.contains("_wire"))
                 item.setCreativeTab(Constants.RESOURCES_TAB);
-            }
+            else if (ConfigHandler.dusts && name.contains("_dust"))
+                item.setCreativeTab(Constants.RESOURCES_TAB);
         }
     }
 
@@ -288,27 +293,31 @@ public class ModItems extends ItemRegistry {
         BRONZE_INGOT = addItem(new ItemBase("bronze_ingot"));
     }
     private static void initNuggets() {
-        COPPER_NUGGET = addItem(new ItemBase("copper_nugget"));
-        TIN_NUGGET = addItem(new ItemBase("tin_nugget"));
-        SILVER_NUGGET = addItem(new ItemBase("silver_nugget"));
-        LEAD_NUGGET = addItem(new ItemBase("lead_nugget"));
-        ALUMINUM_NUGGET = addItem(new ItemBase("aluminum_nugget"));
-        NICKEL_NUGGET = addItem(new ItemBase("nickel_nugget"));
-        PLATINUM_NUGGET = addItem(new ItemBase("platinum_nugget"));
-        STEEL_NUGGET = addItem(new ItemBase("steel_nugget"));
-        ELECTRUM_NUGGET = addItem(new ItemBase("electrum_nugget"));
-        BRONZE_NUGGET = addItem(new ItemBase("bronze_nugget"));
-        IRON_NUGGET = addItem(new ItemBase("iron_nugget"));
-        COAL_NUGGET = addItem(new ItemBase("coal_nugget") {
-            @Override
-            public int getItemBurnTime(ItemStack itemStack) {
-                return 200;
-            }
-        });
-        DIAMOND_NUGGET = addItem(new ItemBase("diamond_nugget"));
-        EMERALD_NUGGET = addItem(new ItemBase("emerald_nugget"));
-        LAPIS_NUGGET = addItem(new ItemBase("lapis_nugget"));
-        REDSTONE_NUGGET = addItem(new ItemBase("redstone_nugget"));
+        if (ConfigHandler.ingotNuggets) {
+            COPPER_NUGGET = addItem(new ItemBase("copper_nugget"));
+            TIN_NUGGET = addItem(new ItemBase("tin_nugget"));
+            SILVER_NUGGET = addItem(new ItemBase("silver_nugget"));
+            LEAD_NUGGET = addItem(new ItemBase("lead_nugget"));
+            ALUMINUM_NUGGET = addItem(new ItemBase("aluminum_nugget"));
+            NICKEL_NUGGET = addItem(new ItemBase("nickel_nugget"));
+            PLATINUM_NUGGET = addItem(new ItemBase("platinum_nugget"));
+            STEEL_NUGGET = addItem(new ItemBase("steel_nugget"));
+            ELECTRUM_NUGGET = addItem(new ItemBase("electrum_nugget"));
+            BRONZE_NUGGET = addItem(new ItemBase("bronze_nugget"));
+            IRON_NUGGET = addItem(new ItemBase("iron_nugget"));
+        }
+        if (ConfigHandler.gemNuggets) {
+            COAL_NUGGET = addItem(new ItemBase("coal_nugget") {
+                @Override
+                public int getItemBurnTime(ItemStack itemStack) {
+                    return 200;
+                }
+            });
+            DIAMOND_NUGGET = addItem(new ItemBase("diamond_nugget"));
+            EMERALD_NUGGET = addItem(new ItemBase("emerald_nugget"));
+            LAPIS_NUGGET = addItem(new ItemBase("lapis_nugget"));
+            REDSTONE_NUGGET = addItem(new ItemBase("redstone_nugget"));
+        }
     }
     private static void initDusts() {
         COPPER_DUST = addItem(new ItemBase("copper_dust"));

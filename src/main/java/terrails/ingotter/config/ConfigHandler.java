@@ -22,6 +22,9 @@ public class ConfigHandler {
     public static boolean dusts;
     public static boolean wires;
     public static boolean armor;
+    public static boolean ingotNuggets;
+    public static boolean gemNuggets;
+    public static boolean ingots;
 
     public static String[] generationArray;
     public static boolean generate;
@@ -46,6 +49,9 @@ public class ConfigHandler {
         dusts = config.get(FEATURES, "Dusts", true).getBoolean();
         wires = config.get(FEATURES, "Wires", true).getBoolean();
         armor = config.get(FEATURES, "Armors", true).getBoolean();
+        ingotNuggets = config.get(FEATURES, "Ingot Nuggets", true).getBoolean();
+        gemNuggets = config.get(FEATURES, "Gem Nuggets", true).getBoolean();
+        ingots = config.get(FEATURES, "Ingots", true).getBoolean();
 
         generate = config.get(GENERATION, "Generate", true).getBoolean();
         generationArray = config.getStringList("Ore Generation", GENERATION, INGOTTER_DEFAULT(), "");
