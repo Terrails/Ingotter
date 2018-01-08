@@ -1,0 +1,28 @@
+{
+  "conditions": [
+    {
+      "type": "ingotter:crafting_tools",
+      "value": true
+    },
+    {
+      "type": "ingotter:wires",
+      "value": true
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "result": {
+    "item": "ingotter:invar_wire",
+    "data": 0,
+    "count": 3
+  },
+  "ingredients": [
+    {
+      "type": "forge:ore_dict",
+      "ore": "plateInvar"
+    },
+    {
+      "item": "ingotter:wire_cutters",
+      "data": 32767
+    }
+  ]
+}

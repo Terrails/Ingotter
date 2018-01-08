@@ -6,6 +6,10 @@
     "plates": "terrails.ingotter.recipes.ConditionFactory",
     "dusts": "terrails.ingotter.recipes.ConditionFactory",
     "wires": "terrails.ingotter.recipes.ConditionFactory",
-    "armor": "terrails.ingotter.recipes.ConditionFactory"
+    "armor": "terrails.ingotter.recipes.ConditionFactory",
+    "ingots": "terrails.ingotter.recipes.ConditionFactory",
+    "ingot_nuggets": "terrails.ingotter.recipes.ConditionFactory",
+    "gem_nuggets": "terrails.ingotter.recipes.ConditionFactory",
+    "blocks": "terrails.ingotter.recipes.ConditionFactory"
   }
 }

@@ -1,4 +1,14 @@
 {
+  "conditions": [
+    {
+      "type": "ingotter:crafting_tools",
+      "value": true
+    },
+    {
+      "type": "ingotter:wires",
+      "value": true
+    }
+  ],
   "type": "minecraft:crafting_shapeless",
   "result": {
     "item": "ingotter:copper_wire",

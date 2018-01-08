@@ -61,6 +61,7 @@ item.coal_dust.name=Coal Dust
 item.diamond_dust.name=Diamond Dust
 item.emerald_dust.name=Emerald Dust
 item.lapis_dust.name=Lapis Dust
+item.invar_dust.name=Invar Dust
 
 # Plates
 item.iron_plate.name=Iron Plate
@@ -80,6 +81,7 @@ item.diamond_plate.name=Diamond Plate
 item.emerald_plate.name=Emerald Plate
 item.redstone_plate.name=Redstone Plate
 item.lapis_plate.name=Lapis Plate
+item.invar_plate.name=Invar Plate
 
 # Wires
 item.iron_wire.name=Iron Wire
@@ -99,6 +101,7 @@ item.diamond_wire.name=Diamond Wire
 item.emerald_wire.name=Emerald Wire
 item.redstone_wire.name=Redstone Wire
 item.lapis_wire.name=Lapis Wire
+item.invar_wire.name=Invar Wire
 
 # Blocks
 tile.copper_block.name=Copper Block
@@ -111,6 +114,7 @@ tile.platinum_block.name=Platinum Block
 tile.steel_block.name=Steel Block
 tile.electrum_block.name=Electrum Block
 tile.bronze_block.name=Bronze Block
+tile.invar_block.name=Invar Block
 
 # Ingots
 item.copper_ingot.name=Copper Ingot
@@ -123,6 +127,7 @@ item.platinum_ingot.name=Platinum Ingot
 item.steel_ingot.name=Steel Ingot
 item.electrum_ingot.name=Electrum Ingot
 item.bronze_ingot.name=Bronze Ingot
+item.invar_ingot.name=Invar Ingot
 
 # Nuggets
 item.copper_nugget.name=Copper Nugget
@@ -141,6 +146,7 @@ item.emerald_nugget.name=Emerald Nugget
 item.lapis_nugget.name=Lapis Nugget
 item.iron_nugget.name=Iron Nugget
 item.redstone_nugget.name=Redstone Nugget
+item.invar_nugget.name=Invar Nugget
 
 # Tools
 item.copper_sword.name=Copper Sword
@@ -156,6 +162,7 @@ item.bronze_sword.name=Bronze Sword
 item.emerald_sword.name=Emerald Sword
 item.lapis_sword.name=Lapis Sword
 item.redstone_sword.name=Redstone Sword
+item.invar_sword.name=Invar Sword
 
 item.copper_pickaxe.name=Copper Pickaxe
 item.tin_pickaxe.name=Tin Pickaxe
@@ -170,6 +177,7 @@ item.bronze_pickaxe.name=Bronze Pickaxe
 item.emerald_pickaxe.name=Emerald Pickaxe
 item.lapis_pickaxe.name=Lapis Pickaxe
 item.redstone_pickaxe.name=Redstone Pickaxe
+item.invar_pickaxe.name=Invar Pickaxe
 
 item.copper_shovel.name=Copper Shovel
 item.tin_shovel.name=Tin Shovel
@@ -184,6 +192,7 @@ item.bronze_shovel.name=Bronze Shovel
 item.emerald_shovel.name=Emerald Shovel
 item.lapis_shovel.name=Lapis Shovel
 item.redstone_shovel.name=Redstone Shovel
+item.invar_shovel.name=Invar Shovel
 
 item.copper_axe.name=Copper Axe
 item.tin_axe.name=Tin Axe
@@ -198,6 +207,7 @@ item.bronze_axe.name=Bronze Axe
 item.emerald_axe.name=Emerald Axe
 item.lapis_axe.name=Lapis Axe
 item.redstone_axe.name=Redstone Axe
+item.invar_axe.name=Invar Axe
 
 item.copper_hoe.name=Copper Hoe
 item.tin_hoe.name=Tin Hoe
@@ -212,6 +222,7 @@ item.bronze_hoe.name=Bronze Hoe
 item.emerald_hoe.name=Emerald Hoe
 item.lapis_hoe.name=Lapis Hoe
 item.redstone_hoe.name=Redstone Hoe
+item.invar_hoe.name=Invar Hoe
 
 
 # Armor
@@ -228,6 +239,7 @@ item.bronze_helmet.name=Bronze Helmet
 item.emerald_helmet.name=Emerald Helmet
 item.lapis_helmet.name=Lapis Helmet
 item.redstone_helmet.name=Redstone Helmet
+item.invar_helmet.name=Invar Helmet
 
 item.copper_chestplate.name=Copper Chestplate
 item.tin_chestplate.name=Tin Chestplate
@@ -242,6 +254,7 @@ item.bronze_chestplate.name=Bronze Chestplate
 item.emerald_chestplate.name=Emerald Chestplate
 item.lapis_chestplate.name=Lapis Chestplate
 item.redstone_chestplate.name=Redstone Chestplate
+item.invar_chestplate.name=Invar Chestplate
 
 item.copper_leggings.name=Copper Leggings
 item.tin_leggings.name=Tin Leggings
@@ -256,6 +269,7 @@ item.bronze_leggings.name=Bronze Leggings
 item.emerald_leggings.name=Emerald Leggings
 item.lapis_leggings.name=Lapis Leggings
 item.redstone_leggings.name=Redstone Leggings
+item.invar_leggings.name=Invar Leggings
 
 item.copper_boots.name=Copper Boots
 item.tin_boots.name=Tin Boots
@@ -270,6 +284,7 @@ item.bronze_boots.name=Bronze Boots
 item.emerald_boots.name=Emerald Boots
 item.lapis_boots.name=Lapis Boots
 item.redstone_boots.name=Redstone Boots
+item.invar_boots.name=Invar Boots
 
 # Creative Tab
 itemGroup.ingotter_resources=Ingotter Resources

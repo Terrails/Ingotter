@@ -35,13 +35,13 @@ public class ModResourcesCreativeTab extends CreativeTabs {
         this.list = list;
 
         if (ConfigHandler.ores) {
-            for (Block block : ModBlocks.getBlocks()) {
+            for (Block block : ModBlocks.get()) {
                 if (!block.getUnlocalizedName().contains("_block"))
                     this.add(block);
             }
         }
 
-        for (Item item : ModItems.getItems()) {
+        for (Item item : ModItems.get()) {
             if (item != ModItems.WIRE_CUTTERS && item != ModItems.HAMMER) {
                 if (item.getUnlocalizedName().contains("_ingot") || item.getUnlocalizedName().contains("_nugget")) {
                     this.add(item);

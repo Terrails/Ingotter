@@ -37,6 +37,8 @@ public class ConditionFactory implements IConditionFactory {
                 return () -> ConfigHandler.ingotNuggets == value;
             case Constants.MOD_ID + ":gem_nuggets":
                 return () -> ConfigHandler.gemNuggets == value;
+            case Constants.MOD_ID + ":blocks":
+                return () -> ConfigHandler.blocks == value;
         }
         return null;
     }

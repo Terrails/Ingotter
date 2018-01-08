@@ -1,4 +1,10 @@
 {
+  "conditions" : [
+    {
+      "type" : "ingotter:armor",
+      "value" : true
+    }
+  ],
   "type": "minecraft:crafting_shaped",
   "result": {
     "item": "ingotter:nickel_helmet",

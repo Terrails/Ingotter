@@ -1,0 +1,24 @@
+{
+  "conditions" : [
+    {
+      "type" : "ingotter:blocks",
+      "value" : true
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "result": {
+    "item": "ingotter:invar_block",
+    "data": 0
+  },
+  "pattern": [
+    "III",
+    "III",
+    "III"
+  ],
+  "key": {
+    "I": {
+      "type": "forge:ore_dict",
+      "ore": "ingotInvar"
+    }
+  }
+}

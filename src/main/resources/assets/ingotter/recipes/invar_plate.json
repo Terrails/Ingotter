@@ -1,0 +1,32 @@
+{
+  "conditions": [
+    {
+      "type": "ingotter:crafting_tools",
+      "value": true
+    },
+    {
+      "type": "ingotter:plates",
+      "value": true
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "result": {
+    "item": "ingotter:invar_plate",
+    "data": 0,
+    "count": 1
+  },
+  "ingredients": [
+    {
+      "type": "forge:ore_dict",
+      "ore": "ingotInvar"
+    },
+    {
+      "type": "forge:ore_dict",
+      "ore": "ingotInvar"
+    },
+    {
+      "item": "ingotter:hammer",
+      "data": 32767
+    }
+  ]
+}

@@ -28,8 +28,9 @@ public class ModToolsCreativeTab extends CreativeTabs {
             return new ItemStack(ModItems.HAMMER);
         else if (ConfigHandler.tools)
             return new ItemStack(ModItems.BRONZE_SWORD);
-        else
+        else if (ConfigHandler.armor)
             return new ItemStack(ModItems.BRONZE_HELMET);
+        return ItemStack.EMPTY;
     }
 
 
@@ -38,12 +39,12 @@ public class ModToolsCreativeTab extends CreativeTabs {
     public void displayAllRelevantItems(@Nonnull NonNullList<ItemStack> list) {
         this.list = list;
 
-        if(ConfigHandler.tools) {
+        if(ConfigHandler.wireHammer) {
             this.add(ModItems.HAMMER);
             this.add(ModItems.WIRE_CUTTERS);
         }
 
-        for (Item item : ModItems.getItems()) {
+        for (Item item : ModItems.get()) {
             if (item != ModItems.WIRE_CUTTERS && item != ModItems.HAMMER) {
                 if (ConfigHandler.armor) {
                     if (item.getUnlocalizedName().contains("_helmet") || item.getUnlocalizedName().contains("_chestplate") || item.getUnlocalizedName().contains("_leggings") || item.getUnlocalizedName().contains("_boots")) {

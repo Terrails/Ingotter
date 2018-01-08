@@ -1,4 +1,14 @@
 {
+  "conditions": [
+    {
+      "type": "ingotter:crafting_tools",
+      "value": true
+    },
+    {
+      "type": "ingotter:plates",
+      "value": true
+    }
+  ],
   "type": "minecraft:crafting_shapeless",
   "result": {
     "item": "ingotter:nickel_plate",

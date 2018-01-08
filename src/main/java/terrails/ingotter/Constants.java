@@ -17,7 +17,7 @@ public class Constants {
     public static final String MOD_ID = "ingotter";
     public static final String MOD_NAME = "Ingotter";
 
-    public static final String VERSION = "2.0.3";
+    public static final String VERSION = "2.0.4";
     public static final String TERRACORE_VERSION = "2.1.3";
     public static final String ORE_CONTROLLER_VERSION = "1.0.0";
     public static final String MC_VERSION = "[1.12],[1.12.1],[1.12.2]";
@@ -48,6 +48,7 @@ public class Constants {
         public static final Item.ToolMaterial EMERALD_TOOL = EnumHelper.addToolMaterial("EMERALD", 4, 1656, 13.0F, 3.0F, 21);
         public static final Item.ToolMaterial LAPIS_TOOL = EnumHelper.addToolMaterial("LAPIS", 2, 255, 4.8F, 0.7F, 22);
         public static final Item.ToolMaterial REDSTONE_TOOL = EnumHelper.addToolMaterial("REDSTONE", 2, 200, 4.2F, 0.4F, 22);
+        public static final Item.ToolMaterial INVAR_TOOL = EnumHelper.addToolMaterial("INVAR", 2, 360, 6.5F, 2.3F, 14);
 
         public static final ItemArmor.ArmorMaterial COPPER_ARMOR = EnumHelper.addArmorMaterial("COPPER", "ingotter:copper", 7, new int[] { 2, 4, 4, 2 }, 7, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
         public static final ItemArmor.ArmorMaterial TIN_ARMOR = EnumHelper.addArmorMaterial("TIN", "ingotter:tin", 9, new int[] { 2, 4, 5, 2 }, 8, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
@@ -62,5 +63,6 @@ public class Constants {
         public static final ItemArmor.ArmorMaterial EMERALD_ARMOR = EnumHelper.addArmorMaterial("EMERALD", "ingotter:emerald", 40, new int[] { 4, 6, 8, 4 }, 14, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
         public static final ItemArmor.ArmorMaterial LAPIS_ARMOR = EnumHelper.addArmorMaterial("LAPIS", "ingotter:lapis", 6, new int[] { 2, 4, 3, 2 }, 15, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
         public static final ItemArmor.ArmorMaterial REDSTONE_ARMOR = EnumHelper.addArmorMaterial("REDSTONE", "ingotter:redstone", 6, new int[] { 2, 3, 2, 2 }, 15, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
+        public static final ItemArmor.ArmorMaterial INVAR_ARMOR = EnumHelper.addArmorMaterial("INVAR", "ingotter:invar", 18, new int[] { 4, 5, 5, 4 }, 17, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);
     }
 }

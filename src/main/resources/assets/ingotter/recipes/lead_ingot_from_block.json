@@ -1,4 +1,10 @@
 {
+  "conditions" : [
+    {
+      "type" : "ingotter:ingots",
+      "value" : true
+    }
+  ],
   "type": "minecraft:crafting_shapeless",
   "result": {
     "item": "ingotter:lead_ingot",

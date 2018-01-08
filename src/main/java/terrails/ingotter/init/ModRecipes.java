@@ -4,6 +4,7 @@ import net.minecraft.block.Block;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import terrails.ingotter.config.ConfigHandler;
 
@@ -14,7 +15,7 @@ public class ModRecipes {
     }
     
     public static void smeltingRecipes() {
-        if (ConfigHandler.ores) {
+        if (ConfigHandler.ores && ConfigHandler.ingots) {
             addSmelting(ModBlocks.COPPER_ORE, new ItemStack(ModItems.COPPER_INGOT), 0.4F);
             addSmelting(ModBlocks.TIN_ORE, new ItemStack(ModItems.TIN_INGOT), 0.4F);
             addSmelting(ModBlocks.SILVER_ORE, new ItemStack(ModItems.SILVER_INGOT), 0.4F);
@@ -44,7 +45,7 @@ public class ModRecipes {
             addSmelting(ModBlocks.GOLD_END_ORE, new ItemStack(Items.GOLD_INGOT), 0.8f);
         }
 
-        if (ConfigHandler.dusts) {
+        if (ConfigHandler.dusts && ConfigHandler.ingots) {
             addSmelting(ModItems.IRON_DUST, new ItemStack(Items.IRON_INGOT), 0.5F);
             addSmelting(ModItems.GOLD_DUST, new ItemStack(Items.GOLD_INGOT), 0.5F);
             addSmelting(ModItems.COPPER_DUST, new ItemStack(ModItems.COPPER_INGOT), 0.5F);
@@ -60,17 +61,21 @@ public class ModRecipes {
             addSmelting(ModItems.DIAMOND_DUST, new ItemStack(Items.DIAMOND), 0.5F);
             addSmelting(ModItems.EMERALD_DUST, new ItemStack(Items.EMERALD), 0.5F);
             addSmelting(ModItems.LAPIS_DUST, new ItemStack(Items.DYE, 1, 4), 0.5F);
+            addSmelting(ModItems.INVAR_DUST, new ItemStack(ModItems.INVAR_INGOT), 0.5F);
         }
     }
 
 
     public static void addSmelting(Item input, ItemStack output, float xp) {
-        GameRegistry.addSmelting(input, output, xp);
+        FurnaceRecipes.instance().addSmelting(input, output, xp);
+  //      GameRegistry.addSmelting(input, output, xp);
     }
     public static void addSmelting(Block input, ItemStack output, float xp) {
-        GameRegistry.addSmelting(input, output, xp);
+        FurnaceRecipes.instance().addSmeltingRecipeForBlock(input, output, xp);
+  //      GameRegistry.addSmelting(input, output, xp);
     }
     public static void addSmelting(ItemStack input, ItemStack output, float xp) {
-        GameRegistry.addSmelting(input, output, xp);
+        FurnaceRecipes.instance().addSmeltingRecipe(input, output, xp);
+    //    GameRegistry.addSmelting(input, output, xp);
     }
 }

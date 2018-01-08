@@ -1,4 +1,10 @@
 {
+  "conditions" : [
+    {
+      "type" : "ingotter:gem_nuggets",
+      "value" : true
+    }
+  ],
   "type": "minecraft:crafting_shapeless",
   "result": {
     "item": "ingotter:coal_nugget",

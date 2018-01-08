@@ -19,8 +19,7 @@ import terrails.ingotter.world.OreGenerator;
         name = Constants.MOD_NAME,
         version = Constants.VERSION,
         acceptedMinecraftVersions = Constants.MC_VERSION,
-        guiFactory = Constants.GUI_FACTORY
-        )
+        guiFactory = Constants.GUI_FACTORY)
 public class Ingotter {
     @SidedProxy(clientSide = Constants.CLIENT_PROXY, serverSide = Constants.SERVER_PROXY)
     public static IProxy proxy;

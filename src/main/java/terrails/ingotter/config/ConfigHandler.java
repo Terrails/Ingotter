@@ -25,6 +25,7 @@ public class ConfigHandler {
     public static boolean ingotNuggets;
     public static boolean gemNuggets;
     public static boolean ingots;
+    public static boolean blocks;
 
     public static String[] generationArray;
     public static boolean generate;
@@ -52,6 +53,7 @@ public class ConfigHandler {
         ingotNuggets = config.get(FEATURES, "Ingot Nuggets", true).getBoolean();
         gemNuggets = config.get(FEATURES, "Gem Nuggets", true).getBoolean();
         ingots = config.get(FEATURES, "Ingots", true).getBoolean();
+        blocks = config.get(FEATURES, "Blocks", true).getBoolean();
 
         generate = config.get(GENERATION, "Generate", true).getBoolean();
         generationArray = config.getStringList("Ore Generation", GENERATION, INGOTTER_DEFAULT(), "");

@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "normal": {"model": "ingotter:invar_block"},
+    "inventory": {"model": "ingotter:invar_block"}
+  }
+}

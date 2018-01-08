@@ -1,0 +1,23 @@
+{
+  "conditions" : [
+    {
+      "type" : "ingotter:armor",
+      "value" : true
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "result": {
+    "item": "ingotter:invar_helmet",
+    "data": 0
+  },
+  "pattern": [
+    "III",
+    "I I"
+  ],
+  "key": {
+    "I": {
+      "type": "forge:ore_dict",
+      "ore": "ingotInvar"
+    }
+  }
+}

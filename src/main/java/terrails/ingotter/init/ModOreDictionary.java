@@ -30,45 +30,58 @@ public class ModOreDictionary {
             add("oreCoal", ModBlocks.COAL_NETHER_ORE, ModBlocks.COAL_END_ORE);
         }
 
-        add("blockCopper", ModBlocks.COPPER);
-        add("blockTin", ModBlocks.TIN);
-        add("blockSilver", ModBlocks.SILVER);
-        add("blockLead", ModBlocks.LEAD);
-        add(ModBlocks.ALUMINUM, "blockAluminum", "blockAluminium");
-        add(ModBlocks.NICKEL, "blockNickel", "blockFerrous");
-        add("blockPlatinum", ModBlocks.PLATINUM);
-        add("blockSteel", ModBlocks.STEEL);
-        add("blockElectrum", ModBlocks.ELECTRUM);
-        add("blockBronze", ModBlocks.BRONZE);
+        if (ConfigHandler.blocks) {
+            add("blockCopper", ModBlocks.COPPER);
+            add("blockTin", ModBlocks.TIN);
+            add("blockSilver", ModBlocks.SILVER);
+            add("blockLead", ModBlocks.LEAD);
+            add(ModBlocks.ALUMINUM, "blockAluminum", "blockAluminium");
+            add(ModBlocks.NICKEL, "blockNickel", "blockFerrous");
+            add("blockPlatinum", ModBlocks.PLATINUM);
+            add("blockSteel", ModBlocks.STEEL);
+            add("blockElectrum", ModBlocks.ELECTRUM);
+            add("blockBronze", ModBlocks.BRONZE);
+            add("blockInvar", ModBlocks.INVAR);
+        }
     }
     public static void initItems() {
-        add("nuggetCopper", ModItems.COPPER_NUGGET);
-        add("nuggetTin", ModItems.TIN_NUGGET);
-        add("nuggetSilver", ModItems.SILVER_NUGGET);
-        add("nuggetLead", ModItems.LEAD_NUGGET);
-        add(ModItems.ALUMINUM_NUGGET, "nuggetAluminum", "nuggetAluminium");
-        add(ModItems.NICKEL_NUGGET, "nuggetNickel", "nuggetFerrous");
-        add("nuggetPlatinum", ModItems.PLATINUM_NUGGET);
-        add("nuggetSteel", ModItems.STEEL_NUGGET);
-        add("nuggetElectrum", ModItems.ELECTRUM_NUGGET);
-        add("nuggetBronze", ModItems.BRONZE_NUGGET);
-        add("nuggetCoal", ModItems.COAL_NUGGET);
-        add("nuggetDiamond", ModItems.DIAMOND_NUGGET);
-        add("nuggetEmerald", ModItems.EMERALD_NUGGET);
-        add("nuggetLapis", ModItems.LAPIS_NUGGET);
-        add("nuggetIron", ModItems.IRON_NUGGET);
-        add("nuggetRedstone", ModItems.REDSTONE_NUGGET);
 
-        add("ingotCopper", ModItems.COPPER_INGOT);
-        add("ingotTin", ModItems.TIN_INGOT);
-        add("ingotSilver", ModItems.SILVER_INGOT);
-        add("ingotLead", ModItems.LEAD_INGOT);
-        add(ModItems.ALUMINUM_INGOT, "ingotAluminum", "ingotAluminium");
-        add(ModItems.NICKEL_INGOT, "ingotNickel", "ingotFerrous");
-        add("ingotPlatinum", ModItems.PLATINUM_INGOT);
-        add("ingotSteel", ModItems.STEEL_INGOT);
-        add("ingotElectrum", ModItems.ELECTRUM_INGOT);
-        add("ingotBronze", ModItems.BRONZE_INGOT);
+        if (ConfigHandler.ingotNuggets) {
+            add("nuggetCopper", ModItems.COPPER_NUGGET);
+            add("nuggetTin", ModItems.TIN_NUGGET);
+            add("nuggetSilver", ModItems.SILVER_NUGGET);
+            add("nuggetLead", ModItems.LEAD_NUGGET);
+            add(ModItems.ALUMINUM_NUGGET, "nuggetAluminum", "nuggetAluminium");
+            add(ModItems.NICKEL_NUGGET, "nuggetNickel", "nuggetFerrous");
+            add("nuggetPlatinum", ModItems.PLATINUM_NUGGET);
+            add("nuggetSteel", ModItems.STEEL_NUGGET);
+            add("nuggetElectrum", ModItems.ELECTRUM_NUGGET);
+            add("nuggetBronze", ModItems.BRONZE_NUGGET);
+            add("nuggetIron", ModItems.IRON_NUGGET);
+            add("nuggetInvar", ModItems.INVAR_NUGGET);
+        }
+
+        if (ConfigHandler.gemNuggets) {
+            add("nuggetCoal", ModItems.COAL_NUGGET);
+            add("nuggetDiamond", ModItems.DIAMOND_NUGGET);
+            add("nuggetEmerald", ModItems.EMERALD_NUGGET);
+            add("nuggetLapis", ModItems.LAPIS_NUGGET);
+            add("nuggetRedstone", ModItems.REDSTONE_NUGGET);
+        }
+
+        if (ConfigHandler.ingots) {
+            add("ingotCopper", ModItems.COPPER_INGOT);
+            add("ingotTin", ModItems.TIN_INGOT);
+            add("ingotSilver", ModItems.SILVER_INGOT);
+            add("ingotLead", ModItems.LEAD_INGOT);
+            add(ModItems.ALUMINUM_INGOT, "ingotAluminum", "ingotAluminium");
+            add(ModItems.NICKEL_INGOT, "ingotNickel", "ingotFerrous");
+            add("ingotPlatinum", ModItems.PLATINUM_INGOT);
+            add("ingotSteel", ModItems.STEEL_INGOT);
+            add("ingotElectrum", ModItems.ELECTRUM_INGOT);
+            add("ingotBronze", ModItems.BRONZE_INGOT);
+            add("ingotInvar", ModItems.INVAR_INGOT);
+        }
 
         if (ConfigHandler.dusts) {
             add("dustCopper", ModItems.COPPER_DUST);
@@ -87,6 +100,7 @@ public class ModOreDictionary {
             add("dustLapis", ModItems.LAPIS_DUST);
             add("dustIron", ModItems.IRON_DUST);
             add("dustGold", ModItems.GOLD_DUST);
+            add("dustInvar", ModItems.INVAR_DUST);
         }
         if (ConfigHandler.plates) {
             add("plateCopper", ModItems.COPPER_PLATE);
@@ -106,6 +120,7 @@ public class ModOreDictionary {
             add("plateIron", ModItems.IRON_PLATE);
             add("plateGold", ModItems.GOLD_PLATE);
             add("plateRedstone", ModItems.REDSTONE_PLATE);
+            add("plateInvar", ModItems.INVAR_PLATE);
         }
         if (ConfigHandler.wires) {
             add("wireCopper", ModItems.COPPER_WIRE);
@@ -125,6 +140,7 @@ public class ModOreDictionary {
             add("wireIron", ModItems.IRON_WIRE);
             add("wireGold", ModItems.GOLD_WIRE);
             add("wireRedstone", ModItems.REDSTONE_WIRE);
+            add("wireInvar", ModItems.INVAR_WIRE);
         }
     }
 

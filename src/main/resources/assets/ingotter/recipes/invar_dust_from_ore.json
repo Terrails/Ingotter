@@ -1,0 +1,28 @@
+{
+  "conditions": [
+    {
+      "type": "ingotter:crafting_tools",
+      "value": true
+    },
+    {
+      "type": "ingotter:dusts",
+      "value": true
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "result": {
+    "item": "ingotter:invar_dust",
+    "data": 0,
+    "count": 2
+  },
+  "ingredients": [
+    {
+      "type": "forge:ore_dict",
+      "ore": "oreInvar"
+    },
+    {
+      "item": "ingotter:hammer",
+      "data": 32767
+    }
+  ]
+}

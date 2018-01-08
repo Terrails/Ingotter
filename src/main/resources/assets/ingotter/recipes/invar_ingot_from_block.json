@@ -1,0 +1,20 @@
+{
+  "conditions" : [
+    {
+      "type" : "ingotter:ingots",
+      "value" : true
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "result": {
+    "item": "ingotter:invar_ingot",
+    "data": 0,
+    "count": 9
+  },
+  "ingredients": [
+    {
+      "type": "forge:ore_dict",
+      "ore": "blockInvar"
+    }
+  ]
+}

@@ -1,4 +1,10 @@
 {
+  "conditions" : [
+    {
+      "type" : "ingotter:blocks",
+      "value" : true
+    }
+  ],
   "type": "minecraft:crafting_shaped",
   "result": {
     "item": "ingotter:aluminum_block",

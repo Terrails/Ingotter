@@ -12,16 +12,17 @@ import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import terrails.ingotter.Constants;
 import terrails.ingotter.blocks.BlockOreBase;
 import terrails.ingotter.blocks.BlockOreCustomDrop;
 import terrails.ingotter.config.ConfigHandler;
-import terrails.terracore.registry.newest.BlockRegistry;
 
+import java.util.List;
 import java.util.Objects;
 
 @Mod.EventBusSubscriber
-public class ModBlocks extends BlockRegistry {
+public class ModBlocks {
+
+    private static List<Block> blocks = Lists.newArrayList();
 
     public static Block COPPER;
     public static Block TIN;
@@ -33,6 +34,7 @@ public class ModBlocks extends BlockRegistry {
     public static Block STEEL;
     public static Block ELECTRUM;
     public static Block BRONZE;
+    public static Block INVAR;
 
     public static Block COPPER_ORE;
     public static Block TIN_ORE;
@@ -73,27 +75,24 @@ public class ModBlocks extends BlockRegistry {
     public static Block COAL_END_ORE;
 
     public static void init() {
-        blockList = Lists.newArrayList();
-        COPPER = add(new BlockOreBase(Material.IRON, "copper_block", 1));
-        TIN = add(new BlockOreBase(Material.IRON, "tin_block", 1));
-        SILVER = add(new BlockOreBase(Material.IRON, "silver_block", 2).setLightLevel(0.5f));
-        LEAD = add(new BlockOreBase(Material.IRON, "lead_block", 2));
-        ALUMINUM = add(new BlockOreBase(Material.IRON, "aluminum_block", 1));
-        NICKEL = add(new BlockOreBase(Material.IRON, "nickel_block", 2));
-        PLATINUM = add(new BlockOreBase(Material.IRON, "platinum_block", 3));
-        STEEL = add(new BlockOreBase(Material.IRON, "steel_block", 3));
-        ELECTRUM = add(new BlockOreBase(Material.IRON, "electrum_block", 3));
-        BRONZE = add(new BlockOreBase(Material.IRON, "bronze_block", 3));
+        if (ConfigHandler.blocks) {
+            COPPER = add(new BlockOreBase(Material.IRON, "copper_block", 1));
+            TIN = add(new BlockOreBase(Material.IRON, "tin_block", 1));
+            SILVER = add(new BlockOreBase(Material.IRON, "silver_block", 2).setLightLevel(0.5f));
+            LEAD = add(new BlockOreBase(Material.IRON, "lead_block", 2));
+            ALUMINUM = add(new BlockOreBase(Material.IRON, "aluminum_block", 1));
+            NICKEL = add(new BlockOreBase(Material.IRON, "nickel_block", 2));
+            PLATINUM = add(new BlockOreBase(Material.IRON, "platinum_block", 3));
+            STEEL = add(new BlockOreBase(Material.IRON, "steel_block", 3));
+            ELECTRUM = add(new BlockOreBase(Material.IRON, "electrum_block", 3));
+            BRONZE = add(new BlockOreBase(Material.IRON, "bronze_block", 3));
+            INVAR = add(new BlockOreBase(Material.IRON, "invar_block", 2));
+        }
 
         if (ConfigHandler.ores) {
             initOres();
             initNetherOres();
             initEndOres();
-        }
-
-        for (Block block : getBlocks()) {
-            if (block.getRegistryName() != null && block.getRegistryName().getResourceDomain().contains(Constants.MOD_ID)) {}
-          //      block.setCreativeTab(Constants.RESOURCES_TAB);
         }
     }
     
@@ -139,13 +138,22 @@ public class ModBlocks extends BlockRegistry {
         COAL_END_ORE = add(new BlockOreCustomDrop("coal_ore_end", Items.DIAMOND, 0, 1, 2, 1, 0));
     }
 
+    public static <T extends Block> T add(T block) {
+        blocks.add(block);
+        return block;
+    }
+
+    public static Block[] get() {
+        return blocks.toArray(new Block[blocks.size()]);
+    }
+
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event) {
-        event.getRegistry().registerAll(getBlocks());
+        event.getRegistry().registerAll(get());
     }
     @SubscribeEvent
     public static void registerItemBlocks(net.minecraftforge.event.RegistryEvent.Register<Item> event) {
-        for (Block block : getBlocks()) {
+        for (Block block : get()) {
             if (block.getRegistryName() != null)
                 event.getRegistry().register(new ItemBlock(block).setRegistryName(block.getRegistryName()));
         }
@@ -153,7 +161,7 @@ public class ModBlocks extends BlockRegistry {
     }
     @SubscribeEvent
     public static void registerModels(ModelRegistryEvent event) {
-        for (Block block : getBlocks()) {
+        for (Block block : get()) {
             ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), 0, new ModelResourceLocation(Objects.requireNonNull(block.getRegistryName()), "inventory"));
         }
     }
