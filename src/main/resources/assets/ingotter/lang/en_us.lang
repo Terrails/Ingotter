@@ -224,6 +224,21 @@ item.lapis_hoe.name=Lapis Hoe
 item.redstone_hoe.name=Redstone Hoe
 item.invar_hoe.name=Invar Hoe
 
+item.copper_paxel.name=Copper Paxel
+item.tin_paxel.name=Tin Paxel
+item.silver_paxel.name=Silver Paxel
+item.lead_paxel.name=Lead Paxel
+item.aluminum_paxel.name=Aluminum Paxel
+item.nickel_paxel.name=Nickel Paxel
+item.platinum_paxel.name=Platinum Paxel
+item.steel_paxel.name=Steel Paxel
+item.electrum_paxel.name=Electrum Paxel
+item.bronze_paxel.name=Bronze Paxel
+item.emerald_paxel.name=Emerald Paxel
+item.lapis_paxel.name=Lapis Paxel
+item.redstone_paxel.name=Redstone Paxel
+item.invar_paxel.name=Invar Paxel
+
 
 # Armor
 item.copper_helmet.name=Copper Helmet

@@ -14,6 +14,8 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import terrails.ingotter.Constants;
 import terrails.ingotter.config.ConfigHandler;
+import terrails.ingotter.items.ArmorRepairBase;
+import terrails.ingotter.items.PaxelBase;
 import terrails.terracore.item.ArmorBase;
 import terrails.terracore.item.ItemBase;
 import terrails.terracore.item.ItemCraftingDurabilityBase;
@@ -190,6 +192,21 @@ public class ModItems {
     public static Item LAPIS_HOE;
     public static Item REDSTONE_HOE;
     public static Item INVAR_HOE;
+
+    public static Item COPPER_PAXEL;
+    public static Item TIN_PAXEL;
+    public static Item SILVER_PAXEL;
+    public static Item LEAD_PAXEL;
+    public static Item ALUMINUM_PAXEL;
+    public static Item NICKEL_PAXEL;
+    public static Item PLATINUM_PAXEL;
+    public static Item STEEL_PAXEL;
+    public static Item ELECTRUM_PAXEL;
+    public static Item BRONZE_PAXEL;
+    public static Item EMERALD_PAXEL;
+    public static Item LAPIS_PAXEL;
+    public static Item REDSTONE_PAXEL;
+    public static Item INVAR_PAXEL;
 
     public static Item COPPER_HELMET;
     public static Item TIN_HELMET;
@@ -419,155 +436,169 @@ public class ModItems {
         COPPER_SHOVEL = add(new ShovelBase(Constants.Materials.COPPER_TOOL, "copper_shovel"));
         COPPER_AXE = add(new AxeBase(Constants.Materials.COPPER_TOOL, "copper_axe"));
         COPPER_HOE = add(new HoeBase(Constants.Materials.COPPER_TOOL, "copper_hoe"));
+        COPPER_PAXEL = add(new PaxelBase(Constants.Materials.COPPER_TOOL, "copper_paxel"));
 
         TIN_SWORD = add(new SwordBase(Constants.Materials.TIN_TOOL, "tin_sword"));
         TIN_PICKAXE = add(new PickaxeBase(Constants.Materials.TIN_TOOL, "tin_pickaxe"));
         TIN_SHOVEL = add(new ShovelBase(Constants.Materials.TIN_TOOL, "tin_shovel"));
         TIN_AXE = add(new AxeBase(Constants.Materials.TIN_TOOL, "tin_axe"));
         TIN_HOE = add(new HoeBase(Constants.Materials.TIN_TOOL, "tin_hoe"));
+        TIN_PAXEL = add(new PaxelBase(Constants.Materials.TIN_TOOL, "tin_paxel"));
 
         SILVER_SWORD = add(new SwordBase(Constants.Materials.SILVER_TOOL, "silver_sword"));
         SILVER_PICKAXE = add(new PickaxeBase(Constants.Materials.SILVER_TOOL, "silver_pickaxe"));
         SILVER_SHOVEL = add(new ShovelBase(Constants.Materials.SILVER_TOOL, "silver_shovel"));
         SILVER_AXE = add(new AxeBase(Constants.Materials.SILVER_TOOL, "silver_axe"));
         SILVER_HOE = add(new HoeBase(Constants.Materials.SILVER_TOOL, "silver_hoe"));
+        SILVER_PAXEL = add(new PaxelBase(Constants.Materials.SILVER_TOOL, "silver_paxel"));
 
         LEAD_SWORD = add(new SwordBase(Constants.Materials.LEAD_TOOL, "lead_sword"));
         LEAD_PICKAXE = add(new PickaxeBase(Constants.Materials.LEAD_TOOL, "lead_pickaxe"));
         LEAD_SHOVEL = add(new ShovelBase(Constants.Materials.LEAD_TOOL, "lead_shovel"));
         LEAD_AXE = add(new AxeBase(Constants.Materials.LEAD_TOOL, "lead_axe"));
         LEAD_HOE = add(new HoeBase(Constants.Materials.LEAD_TOOL, "lead_hoe"));
+        LEAD_PAXEL = add(new PaxelBase(Constants.Materials.LEAD_TOOL, "lead_paxel"));
 
         ALUMINUM_SWORD = add(new SwordBase(Constants.Materials.ALUMINUM_TOOL, "aluminum_sword"));
         ALUMINUM_PICKAXE = add(new PickaxeBase(Constants.Materials.ALUMINUM_TOOL, "aluminum_pickaxe"));
         ALUMINUM_SHOVEL = add(new ShovelBase(Constants.Materials.ALUMINUM_TOOL, "aluminum_shovel"));
         ALUMINUM_AXE = add(new AxeBase(Constants.Materials.ALUMINUM_TOOL, "aluminum_axe"));
         ALUMINUM_HOE = add(new HoeBase(Constants.Materials.ALUMINUM_TOOL, "aluminum_hoe"));
+        ALUMINUM_PAXEL = add(new PaxelBase(Constants.Materials.ALUMINUM_TOOL, "aluminum_paxel"));
 
         NICKEL_SWORD = add(new SwordBase(Constants.Materials.NICKEL_TOOL, "nickel_sword"));
         NICKEL_PICKAXE = add(new PickaxeBase(Constants.Materials.NICKEL_TOOL, "nickel_pickaxe"));
         NICKEL_SHOVEL = add(new ShovelBase(Constants.Materials.NICKEL_TOOL, "nickel_shovel"));
         NICKEL_AXE = add(new AxeBase(Constants.Materials.NICKEL_TOOL, "nickel_axe"));
         NICKEL_HOE = add(new HoeBase(Constants.Materials.NICKEL_TOOL, "nickel_hoe"));
+        NICKEL_PAXEL = add(new PaxelBase(Constants.Materials.NICKEL_TOOL, "nickel_paxel"));
 
         PLATINUM_SWORD = add(new SwordBase(Constants.Materials.PLATINUM_TOOL, "platinum_sword"));
         PLATINUM_PICKAXE = add(new PickaxeBase(Constants.Materials.PLATINUM_TOOL, "platinum_pickaxe"));
         PLATINUM_SHOVEL = add(new ShovelBase(Constants.Materials.PLATINUM_TOOL, "platinum_shovel"));
         PLATINUM_AXE = add(new AxeBase(Constants.Materials.PLATINUM_TOOL, "platinum_axe"));
         PLATINUM_HOE = add(new HoeBase(Constants.Materials.PLATINUM_TOOL, "platinum_hoe"));
+        PLATINUM_PAXEL = add(new PaxelBase(Constants.Materials.PLATINUM_TOOL, "platinum_paxel"));
 
         STEEL_SWORD = add(new SwordBase(Constants.Materials.STEEL_TOOL, "steel_sword"));
         STEEL_PICKAXE = add(new PickaxeBase(Constants.Materials.STEEL_TOOL, "steel_pickaxe"));
         STEEL_SHOVEL = add(new ShovelBase(Constants.Materials.STEEL_TOOL, "steel_shovel"));
         STEEL_AXE = add(new AxeBase(Constants.Materials.STEEL_TOOL, "steel_axe"));
         STEEL_HOE = add(new HoeBase(Constants.Materials.STEEL_TOOL, "steel_hoe"));
+        STEEL_PAXEL = add(new PaxelBase(Constants.Materials.STEEL_TOOL, "steel_paxel"));
 
         ELECTRUM_SWORD = add(new SwordBase(Constants.Materials.ELECTRUM_TOOL, "electrum_sword"));
         ELECTRUM_PICKAXE = add(new PickaxeBase(Constants.Materials.ELECTRUM_TOOL, "electrum_pickaxe"));
         ELECTRUM_SHOVEL = add(new ShovelBase(Constants.Materials.ELECTRUM_TOOL, "electrum_shovel"));
         ELECTRUM_AXE = add(new AxeBase(Constants.Materials.ELECTRUM_TOOL, "electrum_axe"));
         ELECTRUM_HOE = add(new HoeBase(Constants.Materials.ELECTRUM_TOOL, "electrum_hoe"));
+        ELECTRUM_PAXEL = add(new PaxelBase(Constants.Materials.ELECTRUM_TOOL, "electrum_paxel"));
 
         BRONZE_SWORD = add(new SwordBase(Constants.Materials.BRONZE_TOOL, "bronze_sword"));
         BRONZE_PICKAXE = add(new PickaxeBase(Constants.Materials.BRONZE_TOOL, "bronze_pickaxe"));
         BRONZE_SHOVEL = add(new ShovelBase(Constants.Materials.BRONZE_TOOL, "bronze_shovel"));
         BRONZE_AXE = add(new AxeBase(Constants.Materials.BRONZE_TOOL, "bronze_axe"));
         BRONZE_HOE = add(new HoeBase(Constants.Materials.BRONZE_TOOL, "bronze_hoe"));
+        BRONZE_PAXEL = add(new PaxelBase(Constants.Materials.BRONZE_TOOL, "bronze_paxel"));
 
         EMERALD_SWORD = add(new SwordBase(Constants.Materials.EMERALD_TOOL, "emerald_sword"));
         EMERALD_PICKAXE = add(new PickaxeBase(Constants.Materials.EMERALD_TOOL, "emerald_pickaxe"));
         EMERALD_SHOVEL = add(new ShovelBase(Constants.Materials.EMERALD_TOOL, "emerald_shovel"));
         EMERALD_AXE = add(new AxeBase(Constants.Materials.EMERALD_TOOL, "emerald_axe"));
         EMERALD_HOE = add(new HoeBase(Constants.Materials.EMERALD_TOOL, "emerald_hoe"));
+        EMERALD_PAXEL = add(new PaxelBase(Constants.Materials.EMERALD_TOOL, "emerald_paxel"));
 
         LAPIS_SWORD = add(new SwordBase(Constants.Materials.LAPIS_TOOL, "lapis_sword"));
         LAPIS_PICKAXE = add(new PickaxeBase(Constants.Materials.LAPIS_TOOL, "lapis_pickaxe"));
         LAPIS_SHOVEL = add(new ShovelBase(Constants.Materials.LAPIS_TOOL, "lapis_shovel"));
         LAPIS_AXE = add(new AxeBase(Constants.Materials.LAPIS_TOOL, "lapis_axe"));
         LAPIS_HOE = add(new HoeBase(Constants.Materials.LAPIS_TOOL, "lapis_hoe"));
+        LAPIS_PAXEL = add(new PaxelBase(Constants.Materials.LAPIS_TOOL, "lapis_paxel"));
 
         REDSTONE_SWORD = add(new SwordBase(Constants.Materials.REDSTONE_TOOL, "redstone_sword"));
         REDSTONE_PICKAXE = add(new PickaxeBase(Constants.Materials.REDSTONE_TOOL, "redstone_pickaxe"));
         REDSTONE_SHOVEL = add(new ShovelBase(Constants.Materials.REDSTONE_TOOL, "redstone_shovel"));
         REDSTONE_AXE = add(new AxeBase(Constants.Materials.REDSTONE_TOOL, "redstone_axe"));
         REDSTONE_HOE = add(new HoeBase(Constants.Materials.REDSTONE_TOOL, "redstone_hoe"));
+        REDSTONE_PAXEL = add(new PaxelBase(Constants.Materials.REDSTONE_TOOL, "redstone_paxel"));
 
         INVAR_SWORD = add(new SwordBase(Constants.Materials.INVAR_TOOL, "invar_sword"));
         INVAR_PICKAXE = add(new PickaxeBase(Constants.Materials.INVAR_TOOL, "invar_pickaxe"));
         INVAR_SHOVEL = add(new ShovelBase(Constants.Materials.INVAR_TOOL, "invar_shovel"));
         INVAR_AXE = add(new AxeBase(Constants.Materials.INVAR_TOOL, "invar_axe"));
         INVAR_HOE = add(new HoeBase(Constants.Materials.INVAR_TOOL, "invar_hoe"));
+        INVAR_PAXEL = add(new PaxelBase(Constants.Materials.INVAR_TOOL, "invar_paxel"));
     }
     private static void initArmor() {
-        COPPER_HELMET = add(new ArmorBase(Constants.Materials.COPPER_ARMOR, EntityEquipmentSlot.HEAD, "copper_helmet"));
-        COPPER_CHESTPLATE = add(new ArmorBase(Constants.Materials.COPPER_ARMOR, EntityEquipmentSlot.CHEST, "copper_chestplate"));
-        COPPER_LEGGINGS = add(new ArmorBase(Constants.Materials.COPPER_ARMOR, EntityEquipmentSlot.LEGS, "copper_leggings"));
-        COPPER_BOOTS = add(new ArmorBase(Constants.Materials.COPPER_ARMOR, EntityEquipmentSlot.FEET, "copper_boots"));
+        COPPER_HELMET = add(new ArmorRepairBase(Constants.Materials.COPPER_ARMOR, EntityEquipmentSlot.HEAD, "copper_helmet"));
+        COPPER_CHESTPLATE = add(new ArmorRepairBase(Constants.Materials.COPPER_ARMOR, EntityEquipmentSlot.CHEST, "copper_chestplate"));
+        COPPER_LEGGINGS = add(new ArmorRepairBase(Constants.Materials.COPPER_ARMOR, EntityEquipmentSlot.LEGS, "copper_leggings"));
+        COPPER_BOOTS = add(new ArmorRepairBase(Constants.Materials.COPPER_ARMOR, EntityEquipmentSlot.FEET, "copper_boots"));
 
-        TIN_HELMET = add(new ArmorBase(Constants.Materials.TIN_ARMOR, EntityEquipmentSlot.HEAD, "tin_helmet"));
-        TIN_CHESTPLATE = add(new ArmorBase(Constants.Materials.TIN_ARMOR, EntityEquipmentSlot.CHEST, "tin_chestplate"));
-        TIN_LEGGINGS = add(new ArmorBase(Constants.Materials.TIN_ARMOR, EntityEquipmentSlot.LEGS, "tin_leggings"));
-        TIN_BOOTS = add(new ArmorBase(Constants.Materials.TIN_ARMOR, EntityEquipmentSlot.FEET, "tin_boots"));
+        TIN_HELMET = add(new ArmorRepairBase(Constants.Materials.TIN_ARMOR, EntityEquipmentSlot.HEAD, "tin_helmet"));
+        TIN_CHESTPLATE = add(new ArmorRepairBase(Constants.Materials.TIN_ARMOR, EntityEquipmentSlot.CHEST, "tin_chestplate"));
+        TIN_LEGGINGS = add(new ArmorRepairBase(Constants.Materials.TIN_ARMOR, EntityEquipmentSlot.LEGS, "tin_leggings"));
+        TIN_BOOTS = add(new ArmorRepairBase(Constants.Materials.TIN_ARMOR, EntityEquipmentSlot.FEET, "tin_boots"));
 
-        SILVER_HELMET = add(new ArmorBase(Constants.Materials.SILVER_ARMOR, EntityEquipmentSlot.HEAD, "silver_helmet"));
-        SILVER_CHESTPLATE = add(new ArmorBase(Constants.Materials.SILVER_ARMOR, EntityEquipmentSlot.CHEST, "silver_chestplate"));
-        SILVER_LEGGINGS = add(new ArmorBase(Constants.Materials.SILVER_ARMOR, EntityEquipmentSlot.LEGS, "silver_leggings"));
-        SILVER_BOOTS = add(new ArmorBase(Constants.Materials.SILVER_ARMOR, EntityEquipmentSlot.FEET, "silver_boots"));
+        SILVER_HELMET = add(new ArmorRepairBase(Constants.Materials.SILVER_ARMOR, EntityEquipmentSlot.HEAD, "silver_helmet"));
+        SILVER_CHESTPLATE = add(new ArmorRepairBase(Constants.Materials.SILVER_ARMOR, EntityEquipmentSlot.CHEST, "silver_chestplate"));
+        SILVER_LEGGINGS = add(new ArmorRepairBase(Constants.Materials.SILVER_ARMOR, EntityEquipmentSlot.LEGS, "silver_leggings"));
+        SILVER_BOOTS = add(new ArmorRepairBase(Constants.Materials.SILVER_ARMOR, EntityEquipmentSlot.FEET, "silver_boots"));
 
-        LEAD_HELMET = add(new ArmorBase(Constants.Materials.LEAD_ARMOR, EntityEquipmentSlot.HEAD, "lead_helmet"));
-        LEAD_CHESTPLATE = add(new ArmorBase(Constants.Materials.LEAD_ARMOR, EntityEquipmentSlot.CHEST, "lead_chestplate"));
-        LEAD_LEGGINGS = add(new ArmorBase(Constants.Materials.LEAD_ARMOR, EntityEquipmentSlot.LEGS, "lead_leggings"));
-        LEAD_BOOTS = add(new ArmorBase(Constants.Materials.LEAD_ARMOR, EntityEquipmentSlot.FEET, "lead_boots"));
+        LEAD_HELMET = add(new ArmorRepairBase(Constants.Materials.LEAD_ARMOR, EntityEquipmentSlot.HEAD, "lead_helmet"));
+        LEAD_CHESTPLATE = add(new ArmorRepairBase(Constants.Materials.LEAD_ARMOR, EntityEquipmentSlot.CHEST, "lead_chestplate"));
+        LEAD_LEGGINGS = add(new ArmorRepairBase(Constants.Materials.LEAD_ARMOR, EntityEquipmentSlot.LEGS, "lead_leggings"));
+        LEAD_BOOTS = add(new ArmorRepairBase(Constants.Materials.LEAD_ARMOR, EntityEquipmentSlot.FEET, "lead_boots"));
 
-        ALUMINUM_HELMET = add(new ArmorBase(Constants.Materials.ALUMINUM_ARMOR, EntityEquipmentSlot.HEAD, "aluminum_helmet"));
-        ALUMINUM_CHESTPLATE = add(new ArmorBase(Constants.Materials.ALUMINUM_ARMOR, EntityEquipmentSlot.CHEST, "aluminum_chestplate"));
-        ALUMINUM_LEGGINGS = add(new ArmorBase(Constants.Materials.ALUMINUM_ARMOR, EntityEquipmentSlot.LEGS, "aluminum_leggings"));
-        ALUMINUM_BOOTS = add(new ArmorBase(Constants.Materials.ALUMINUM_ARMOR, EntityEquipmentSlot.FEET, "aluminum_boots"));
+        ALUMINUM_HELMET = add(new ArmorRepairBase(Constants.Materials.ALUMINUM_ARMOR, EntityEquipmentSlot.HEAD, "aluminum_helmet"));
+        ALUMINUM_CHESTPLATE = add(new ArmorRepairBase(Constants.Materials.ALUMINUM_ARMOR, EntityEquipmentSlot.CHEST, "aluminum_chestplate"));
+        ALUMINUM_LEGGINGS = add(new ArmorRepairBase(Constants.Materials.ALUMINUM_ARMOR, EntityEquipmentSlot.LEGS, "aluminum_leggings"));
+        ALUMINUM_BOOTS = add(new ArmorRepairBase(Constants.Materials.ALUMINUM_ARMOR, EntityEquipmentSlot.FEET, "aluminum_boots"));
 
-        NICKEL_HELMET = add(new ArmorBase(Constants.Materials.NICKEL_ARMOR, EntityEquipmentSlot.HEAD, "nickel_helmet"));
-        NICKEL_CHESTPLATE = add(new ArmorBase(Constants.Materials.NICKEL_ARMOR, EntityEquipmentSlot.CHEST, "nickel_chestplate"));
-        NICKEL_LEGGINGS = add(new ArmorBase(Constants.Materials.NICKEL_ARMOR, EntityEquipmentSlot.LEGS, "nickel_leggings"));
-        NICKEL_BOOTS = add(new ArmorBase(Constants.Materials.NICKEL_ARMOR, EntityEquipmentSlot.FEET, "nickel_boots"));
+        NICKEL_HELMET = add(new ArmorRepairBase(Constants.Materials.NICKEL_ARMOR, EntityEquipmentSlot.HEAD, "nickel_helmet"));
+        NICKEL_CHESTPLATE = add(new ArmorRepairBase(Constants.Materials.NICKEL_ARMOR, EntityEquipmentSlot.CHEST, "nickel_chestplate"));
+        NICKEL_LEGGINGS = add(new ArmorRepairBase(Constants.Materials.NICKEL_ARMOR, EntityEquipmentSlot.LEGS, "nickel_leggings"));
+        NICKEL_BOOTS = add(new ArmorRepairBase(Constants.Materials.NICKEL_ARMOR, EntityEquipmentSlot.FEET, "nickel_boots"));
 
-        PLATINUM_HELMET = add(new ArmorBase(Constants.Materials.PLATINUM_ARMOR, EntityEquipmentSlot.HEAD, "platinum_helmet"));
-        PLATINUM_CHESTPLATE = add(new ArmorBase(Constants.Materials.PLATINUM_ARMOR, EntityEquipmentSlot.CHEST, "platinum_chestplate"));
-        PLATINUM_LEGGINGS = add(new ArmorBase(Constants.Materials.PLATINUM_ARMOR, EntityEquipmentSlot.LEGS, "platinum_leggings"));
-        PLATINUM_BOOTS = add(new ArmorBase(Constants.Materials.PLATINUM_ARMOR, EntityEquipmentSlot.FEET, "platinum_boots"));
+        PLATINUM_HELMET = add(new ArmorRepairBase(Constants.Materials.PLATINUM_ARMOR, EntityEquipmentSlot.HEAD, "platinum_helmet"));
+        PLATINUM_CHESTPLATE = add(new ArmorRepairBase(Constants.Materials.PLATINUM_ARMOR, EntityEquipmentSlot.CHEST, "platinum_chestplate"));
+        PLATINUM_LEGGINGS = add(new ArmorRepairBase(Constants.Materials.PLATINUM_ARMOR, EntityEquipmentSlot.LEGS, "platinum_leggings"));
+        PLATINUM_BOOTS = add(new ArmorRepairBase(Constants.Materials.PLATINUM_ARMOR, EntityEquipmentSlot.FEET, "platinum_boots"));
 
-        STEEL_HELMET = add(new ArmorBase(Constants.Materials.STEEL_ARMOR, EntityEquipmentSlot.HEAD, "steel_helmet"));
-        STEEL_CHESTPLATE = add(new ArmorBase(Constants.Materials.STEEL_ARMOR, EntityEquipmentSlot.CHEST, "steel_chestplate"));
-        STEEL_LEGGINGS = add(new ArmorBase(Constants.Materials.STEEL_ARMOR, EntityEquipmentSlot.LEGS, "steel_leggings"));
-        STEEL_BOOTS = add(new ArmorBase(Constants.Materials.STEEL_ARMOR, EntityEquipmentSlot.FEET, "steel_boots"));
+        STEEL_HELMET = add(new ArmorRepairBase(Constants.Materials.STEEL_ARMOR, EntityEquipmentSlot.HEAD, "steel_helmet"));
+        STEEL_CHESTPLATE = add(new ArmorRepairBase(Constants.Materials.STEEL_ARMOR, EntityEquipmentSlot.CHEST, "steel_chestplate"));
+        STEEL_LEGGINGS = add(new ArmorRepairBase(Constants.Materials.STEEL_ARMOR, EntityEquipmentSlot.LEGS, "steel_leggings"));
+        STEEL_BOOTS = add(new ArmorRepairBase(Constants.Materials.STEEL_ARMOR, EntityEquipmentSlot.FEET, "steel_boots"));
 
-        ELECTRUM_HELMET = add(new ArmorBase(Constants.Materials.ELECTRUM_ARMOR, EntityEquipmentSlot.HEAD, "electrum_helmet"));
-        ELECTRUM_CHESTPLATE = add(new ArmorBase(Constants.Materials.ELECTRUM_ARMOR, EntityEquipmentSlot.CHEST, "electrum_chestplate"));
-        ELECTRUM_LEGGINGS = add(new ArmorBase(Constants.Materials.ELECTRUM_ARMOR, EntityEquipmentSlot.LEGS, "electrum_leggings"));
-        ELECTRUM_BOOTS = add(new ArmorBase(Constants.Materials.ELECTRUM_ARMOR, EntityEquipmentSlot.FEET, "electrum_boots"));
+        ELECTRUM_HELMET = add(new ArmorRepairBase(Constants.Materials.ELECTRUM_ARMOR, EntityEquipmentSlot.HEAD, "electrum_helmet"));
+        ELECTRUM_CHESTPLATE = add(new ArmorRepairBase(Constants.Materials.ELECTRUM_ARMOR, EntityEquipmentSlot.CHEST, "electrum_chestplate"));
+        ELECTRUM_LEGGINGS = add(new ArmorRepairBase(Constants.Materials.ELECTRUM_ARMOR, EntityEquipmentSlot.LEGS, "electrum_leggings"));
+        ELECTRUM_BOOTS = add(new ArmorRepairBase(Constants.Materials.ELECTRUM_ARMOR, EntityEquipmentSlot.FEET, "electrum_boots"));
 
-        BRONZE_HELMET = add(new ArmorBase(Constants.Materials.BRONZE_ARMOR, EntityEquipmentSlot.HEAD, "bronze_helmet"));
-        BRONZE_CHESTPLATE = add(new ArmorBase(Constants.Materials.BRONZE_ARMOR, EntityEquipmentSlot.CHEST, "bronze_chestplate"));
-        BRONZE_LEGGINGS = add(new ArmorBase(Constants.Materials.BRONZE_ARMOR, EntityEquipmentSlot.LEGS, "bronze_leggings"));
-        BRONZE_BOOTS = add(new ArmorBase(Constants.Materials.BRONZE_ARMOR, EntityEquipmentSlot.FEET, "bronze_boots"));
+        BRONZE_HELMET = add(new ArmorRepairBase(Constants.Materials.BRONZE_ARMOR, EntityEquipmentSlot.HEAD, "bronze_helmet"));
+        BRONZE_CHESTPLATE = add(new ArmorRepairBase(Constants.Materials.BRONZE_ARMOR, EntityEquipmentSlot.CHEST, "bronze_chestplate"));
+        BRONZE_LEGGINGS = add(new ArmorRepairBase(Constants.Materials.BRONZE_ARMOR, EntityEquipmentSlot.LEGS, "bronze_leggings"));
+        BRONZE_BOOTS = add(new ArmorRepairBase(Constants.Materials.BRONZE_ARMOR, EntityEquipmentSlot.FEET, "bronze_boots"));
 
-        EMERALD_HELMET = add(new ArmorBase(Constants.Materials.EMERALD_ARMOR, EntityEquipmentSlot.HEAD, "emerald_helmet"));
-        EMERALD_CHESTPLATE = add(new ArmorBase(Constants.Materials.EMERALD_ARMOR, EntityEquipmentSlot.CHEST, "emerald_chestplate"));
-        EMERALD_LEGGINGS = add(new ArmorBase(Constants.Materials.EMERALD_ARMOR, EntityEquipmentSlot.LEGS, "emerald_leggings"));
-        EMERALD_BOOTS = add(new ArmorBase(Constants.Materials.EMERALD_ARMOR, EntityEquipmentSlot.FEET, "emerald_boots"));
+        EMERALD_HELMET = add(new ArmorRepairBase(Constants.Materials.EMERALD_ARMOR, EntityEquipmentSlot.HEAD, "emerald_helmet"));
+        EMERALD_CHESTPLATE = add(new ArmorRepairBase(Constants.Materials.EMERALD_ARMOR, EntityEquipmentSlot.CHEST, "emerald_chestplate"));
+        EMERALD_LEGGINGS = add(new ArmorRepairBase(Constants.Materials.EMERALD_ARMOR, EntityEquipmentSlot.LEGS, "emerald_leggings"));
+        EMERALD_BOOTS = add(new ArmorRepairBase(Constants.Materials.EMERALD_ARMOR, EntityEquipmentSlot.FEET, "emerald_boots"));
 
-        LAPIS_HELMET = add(new ArmorBase(Constants.Materials.LAPIS_ARMOR, EntityEquipmentSlot.HEAD, "lapis_helmet"));
-        LAPIS_CHESTPLATE = add(new ArmorBase(Constants.Materials.LAPIS_ARMOR, EntityEquipmentSlot.CHEST, "lapis_chestplate"));
-        LAPIS_LEGGINGS = add(new ArmorBase(Constants.Materials.LAPIS_ARMOR, EntityEquipmentSlot.LEGS, "lapis_leggings"));
-        LAPIS_BOOTS = add(new ArmorBase(Constants.Materials.LAPIS_ARMOR, EntityEquipmentSlot.FEET, "lapis_boots"));
+        LAPIS_HELMET = add(new ArmorRepairBase(Constants.Materials.LAPIS_ARMOR, EntityEquipmentSlot.HEAD, "lapis_helmet"));
+        LAPIS_CHESTPLATE = add(new ArmorRepairBase(Constants.Materials.LAPIS_ARMOR, EntityEquipmentSlot.CHEST, "lapis_chestplate"));
+        LAPIS_LEGGINGS = add(new ArmorRepairBase(Constants.Materials.LAPIS_ARMOR, EntityEquipmentSlot.LEGS, "lapis_leggings"));
+        LAPIS_BOOTS = add(new ArmorRepairBase(Constants.Materials.LAPIS_ARMOR, EntityEquipmentSlot.FEET, "lapis_boots"));
 
-        REDSTONE_HELMET = add(new ArmorBase(Constants.Materials.REDSTONE_ARMOR, EntityEquipmentSlot.HEAD, "redstone_helmet"));
-        REDSTONE_CHESTPLATE = add(new ArmorBase(Constants.Materials.REDSTONE_ARMOR, EntityEquipmentSlot.CHEST, "redstone_chestplate"));
-        REDSTONE_LEGGINGS = add(new ArmorBase(Constants.Materials.REDSTONE_ARMOR, EntityEquipmentSlot.LEGS, "redstone_leggings"));
-        REDSTONE_BOOTS = add(new ArmorBase(Constants.Materials.REDSTONE_ARMOR, EntityEquipmentSlot.FEET, "redstone_boots"));
+        REDSTONE_HELMET = add(new ArmorRepairBase(Constants.Materials.REDSTONE_ARMOR, EntityEquipmentSlot.HEAD, "redstone_helmet"));
+        REDSTONE_CHESTPLATE = add(new ArmorRepairBase(Constants.Materials.REDSTONE_ARMOR, EntityEquipmentSlot.CHEST, "redstone_chestplate"));
+        REDSTONE_LEGGINGS = add(new ArmorRepairBase(Constants.Materials.REDSTONE_ARMOR, EntityEquipmentSlot.LEGS, "redstone_leggings"));
+        REDSTONE_BOOTS = add(new ArmorRepairBase(Constants.Materials.REDSTONE_ARMOR, EntityEquipmentSlot.FEET, "redstone_boots"));
 
-        INVAR_HELMET = add(new ArmorBase(Constants.Materials.INVAR_ARMOR, EntityEquipmentSlot.HEAD, "invar_helmet"));
-        INVAR_CHESTPLATE = add(new ArmorBase(Constants.Materials.INVAR_ARMOR, EntityEquipmentSlot.CHEST, "invar_chestplate"));
-        INVAR_LEGGINGS = add(new ArmorBase(Constants.Materials.INVAR_ARMOR, EntityEquipmentSlot.LEGS, "invar_leggings"));
-        INVAR_BOOTS = add(new ArmorBase(Constants.Materials.INVAR_ARMOR, EntityEquipmentSlot.FEET, "invar_boots"));
+        INVAR_HELMET = add(new ArmorRepairBase(Constants.Materials.INVAR_ARMOR, EntityEquipmentSlot.HEAD, "invar_helmet"));
+        INVAR_CHESTPLATE = add(new ArmorRepairBase(Constants.Materials.INVAR_ARMOR, EntityEquipmentSlot.CHEST, "invar_chestplate"));
+        INVAR_LEGGINGS = add(new ArmorRepairBase(Constants.Materials.INVAR_ARMOR, EntityEquipmentSlot.LEGS, "invar_leggings"));
+        INVAR_BOOTS = add(new ArmorRepairBase(Constants.Materials.INVAR_ARMOR, EntityEquipmentSlot.FEET, "invar_boots"));
     }
 
     public static <T extends Item> T add(T item) {

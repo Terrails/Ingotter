@@ -1,0 +1,33 @@
+{
+  "conditions" : [
+    {
+      "type" : "ingotter:tools",
+      "value" : true
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "result": {
+    "item": "ingotter:aluminum_paxel",
+    "data": 0
+  },
+  "pattern": [
+    "AHP",
+    " S ",
+    " S "
+  ],
+  "key": {
+    "A": {
+      "item": "ingotter:aluminum_axe"
+    },
+    "H": {
+      "item": "ingotter:aluminum_shovel"
+    },
+    "P": {
+      "item": "ingotter:aluminum_pickaxe"
+    },
+    "S": {
+      "type": "forge:ore_dict",
+      "ore": "stickWood"
+    }
+  }
+}

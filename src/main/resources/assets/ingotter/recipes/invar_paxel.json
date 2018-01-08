@@ -1,0 +1,33 @@
+{
+  "conditions" : [
+    {
+      "type" : "ingotter:tools",
+      "value" : true
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "result": {
+    "item": "ingotter:invar_paxel",
+    "data": 0
+  },
+  "pattern": [
+    "AHP",
+    " S ",
+    " S "
+  ],
+  "key": {
+    "A": {
+      "item": "ingotter:invar_axe"
+    },
+    "H": {
+      "item": "ingotter:invar_shovel"
+    },
+    "P": {
+      "item": "ingotter:invar_pickaxe"
+    },
+    "S": {
+      "type": "forge:ore_dict",
+      "ore": "stickWood"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "conditions" : [
+    {
+      "type" : "ingotter:tools",
+      "value" : true
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "result": {
+    "item": "ingotter:redstone_paxel",
+    "data": 0
+  },
+  "pattern": [
+    "AHP",
+    " S ",
+    " S "
+  ],
+  "key": {
+    "A": {
+      "item": "ingotter:redstone_axe"
+    },
+    "H": {
+      "item": "ingotter:redstone_shovel"
+    },
+    "P": {
+      "item": "ingotter:redstone_pickaxe"
+    },
+    "S": {
+      "type": "forge:ore_dict",
+      "ore": "stickWood"
+    }
+  }
+}

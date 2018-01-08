@@ -1,0 +1,33 @@
+{
+  "conditions" : [
+    {
+      "type" : "ingotter:tools",
+      "value" : true
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "result": {
+    "item": "ingotter:electrum_paxel",
+    "data": 0
+  },
+  "pattern": [
+    "AHP",
+    " S ",
+    " S "
+  ],
+  "key": {
+    "A": {
+      "item": "ingotter:electrum_axe"
+    },
+    "H": {
+      "item": "ingotter:electrum_shovel"
+    },
+    "P": {
+      "item": "ingotter:electrum_pickaxe"
+    },
+    "S": {
+      "type": "forge:ore_dict",
+      "ore": "stickWood"
+    }
+  }
+}
