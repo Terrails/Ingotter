@@ -5,7 +5,6 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 import terrails.ingotter.config.ConfigHandler;
 
 public class ModRecipes {
@@ -24,25 +23,25 @@ public class ModRecipes {
             addSmelting(ModBlocks.NICKEL_ORE, new ItemStack(ModItems.NICKEL_INGOT), 0.4F);
             addSmelting(ModBlocks.PLATINUM_ORE, new ItemStack(ModItems.PLATINUM_INGOT), 0.4F);
 
-            addSmelting(ModBlocks.COPPER_NETHER_ORE, new ItemStack(ModItems.COPPER_INGOT), 0.5F);
-            addSmelting(ModBlocks.TIN_NETHER_ORE, new ItemStack(ModItems.TIN_INGOT), 0.5F);
-            addSmelting(ModBlocks.SILVER_NETHER_ORE, new ItemStack(ModItems.SILVER_INGOT), 0.5F);
-            addSmelting(ModBlocks.LEAD_NETHER_ORE, new ItemStack(ModItems.LEAD_INGOT), 0.5F);
-            addSmelting(ModBlocks.ALUMINUM_NETHER_ORE, new ItemStack(ModItems.ALUMINUM_INGOT), 0.5F);
-            addSmelting(ModBlocks.NICKEL_NETHER_ORE, new ItemStack(ModItems.NICKEL_INGOT), 0.5F);
-            addSmelting(ModBlocks.PLATINUM_NETHER_ORE, new ItemStack(ModItems.PLATINUM_INGOT), 0.5F);
-            addSmelting(ModBlocks.IRON_NETHER_ORE, new ItemStack(Items.IRON_INGOT), 0.5F);
-            addSmelting(ModBlocks.GOLD_NETHER_ORE, new ItemStack(Items.GOLD_INGOT), 0.5F);
+            addSmelting(ModBlocks.COPPER_ORE_NETHER, new ItemStack(ModItems.COPPER_INGOT), 0.5F);
+            addSmelting(ModBlocks.TIN_ORE_NETHER, new ItemStack(ModItems.TIN_INGOT), 0.5F);
+            addSmelting(ModBlocks.SILVER_ORE_NETHER, new ItemStack(ModItems.SILVER_INGOT), 0.5F);
+            addSmelting(ModBlocks.LEAD_ORE_NETHER, new ItemStack(ModItems.LEAD_INGOT), 0.5F);
+            addSmelting(ModBlocks.ALUMINUM_ORE_NETHER, new ItemStack(ModItems.ALUMINUM_INGOT), 0.5F);
+            addSmelting(ModBlocks.NICKEL_ORE_NETHER, new ItemStack(ModItems.NICKEL_INGOT), 0.5F);
+            addSmelting(ModBlocks.PLATINUM_ORE_NETHER, new ItemStack(ModItems.PLATINUM_INGOT), 0.5F);
+            addSmelting(ModBlocks.IRON_ORE_NETHER, new ItemStack(Items.IRON_INGOT), 0.5F);
+            addSmelting(ModBlocks.GOLD_ORE_NETHER, new ItemStack(Items.GOLD_INGOT), 0.5F);
 
-            addSmelting(ModBlocks.COPPER_END_ORE, new ItemStack(ModItems.COPPER_INGOT), 0.8f);
-            addSmelting(ModBlocks.TIN_END_ORE, new ItemStack(ModItems.TIN_INGOT), 0.8f);
-            addSmelting(ModBlocks.SILVER_END_ORE, new ItemStack(ModItems.SILVER_INGOT), 0.8f);
-            addSmelting(ModBlocks.LEAD_END_ORE, new ItemStack(ModItems.LEAD_INGOT), 0.8f);
-            addSmelting(ModBlocks.ALUMINUM_END_ORE, new ItemStack(ModItems.ALUMINUM_INGOT), 0.8f);
-            addSmelting(ModBlocks.NICKEL_END_ORE, new ItemStack(ModItems.NICKEL_INGOT), 0.8f);
-            addSmelting(ModBlocks.PLATINUM_END_ORE, new ItemStack(ModItems.PLATINUM_INGOT), 0.8f);
-            addSmelting(ModBlocks.IRON_END_ORE, new ItemStack(Items.IRON_INGOT), 0.8f);
-            addSmelting(ModBlocks.GOLD_END_ORE, new ItemStack(Items.GOLD_INGOT), 0.8f);
+            addSmelting(ModBlocks.COPPER_ORE_END, new ItemStack(ModItems.COPPER_INGOT), 0.8f);
+            addSmelting(ModBlocks.TIN_ORE_END, new ItemStack(ModItems.TIN_INGOT), 0.8f);
+            addSmelting(ModBlocks.SILVER_ORE_END, new ItemStack(ModItems.SILVER_INGOT), 0.8f);
+            addSmelting(ModBlocks.LEAD_ORE_END, new ItemStack(ModItems.LEAD_INGOT), 0.8f);
+            addSmelting(ModBlocks.ALUMINUM_ORE_END, new ItemStack(ModItems.ALUMINUM_INGOT), 0.8f);
+            addSmelting(ModBlocks.NICKEL_ORE_END, new ItemStack(ModItems.NICKEL_INGOT), 0.8f);
+            addSmelting(ModBlocks.PLATINUM_ORE_END, new ItemStack(ModItems.PLATINUM_INGOT), 0.8f);
+            addSmelting(ModBlocks.IRON_ORE_END, new ItemStack(Items.IRON_INGOT), 0.8f);
+            addSmelting(ModBlocks.GOLD_ORE_END, new ItemStack(Items.GOLD_INGOT), 0.8f);
         }
 
         if (ConfigHandler.dusts && ConfigHandler.ingots) {

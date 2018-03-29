@@ -1,33 +1,34 @@
 ## English UK Localization of Ingotter ##
 
 # Ores
-tile.aluminum_ore.name=Aluminium Ore
-tile.aluminum_ore_nether.name=Aluminium Ore
-tile.aluminum_ore_end.name=Aluminium Ore
+tile.ingotter.aluminum_ore.name=Aluminium Ore
+tile.ingotter.aluminum_ore_nether.name=Aluminium Ore
+tile.ingotter.aluminum_ore_end.name=Aluminium Ore
 
 # Items
-item.aluminum_dust.name=Aluminium Dust
-item.aluminum_plate.name=Aluminium Plate
-item.aluminum_wire.name=Aluminium Wire
+item.ingotter.aluminum_dust.name=Aluminium Dust
+item.ingotter.aluminum_plate.name=Aluminium Plate
+item.ingotter.aluminum_wire.name=Aluminium Wire
 
 # Blocks
-tile.aluminum_block.name=Aluminium Block
+tile.ingotter.aluminum_block.name=Aluminium Block
 
 # Ingots
-item.aluminum_ingot.name=Aluminium Ingot
+item.ingotter.aluminum_ingot.name=Aluminium Ingot
 
 # Nuggets
-item.aluminum_nugget.name=Aluminium Nugget
+item.ingotter.aluminum_nugget.name=Aluminium Nugget
 
 # Tools
-item.aluminum_sword.name=Aluminium Sword
-item.aluminum_pickaxe.name=Aluminium Pickaxe
-item.aluminum_shovel.name=Aluminium Shovel
-item.aluminum_axe.name=Aluminium Axe
-item.aluminum_hoe.name=Aluminium Hoe
+item.ingotter.aluminum_sword.name=Aluminium Sword
+item.ingotter.aluminum_pickaxe.name=Aluminium Pickaxe
+item.ingotter.aluminum_shovel.name=Aluminium Shovel
+item.ingotter.aluminum_axe.name=Aluminium Axe
+item.ingotter.aluminum_hoe.name=Aluminium Hoe
+item.ingotter.aluminum_paxel.name=Aluminium Paxel
 
 # Armor
-item.aluminum_helmet.name=Aluminium Helmet
-item.aluminum_chestplate.name=Aluminium Chestplate
-item.aluminum_leggings.name=Aluminium Leggings
-item.aluminum_boots.name=Aluminium Boots
+item.ingotter.aluminum_helmet.name=Aluminium Helmet
+item.ingotter.aluminum_chestplate.name=Aluminium Chestplate
+item.ingotter.aluminum_leggings.name=Aluminium Leggings
+item.ingotter.aluminum_boots.name=Aluminium Boots

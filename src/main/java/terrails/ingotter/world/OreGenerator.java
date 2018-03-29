@@ -8,9 +8,9 @@ import net.minecraftforge.fml.common.IWorldGenerator;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.Event;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import org.apache.commons.lang3.StringUtils;
 import terrails.ingotter.config.ConfigHandler;
 import terrails.orecontroller.api.CustomOreGenerator;
-import terrails.terracore.helper.StringHelper;
 
 import java.util.Random;
 
@@ -22,7 +22,7 @@ public class OreGenerator extends CustomOreGenerator implements IWorldGenerator 
         if (ConfigHandler.generate && ConfigHandler.ores) {
             for (String ore : ConfigHandler.generationArray) {
                 String oreName = ore.toLowerCase();
-                String nameOfOre = StringHelper.getSubstringBefore(oreName, " -");
+                String nameOfOre = StringUtils.substringBefore(oreName, " -");
 
                 switch (event.getType()) {
                     case COAL:

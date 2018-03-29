@@ -3,6 +3,7 @@ package terrails.ingotter.items;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.oredict.OreDictionary;
 import terrails.ingotter.Constants;
 import terrails.terracore.item.ArmorBase;
@@ -12,7 +13,9 @@ import javax.annotation.Nullable;
 public class ArmorRepairBase extends ArmorBase {
 
     public ArmorRepairBase(ArmorMaterial material, EntityEquipmentSlot slot, String name) {
-        super(material, slot, name);
+        super(material, slot, Constants.MOD_ID);
+        setRegistryName(new ResourceLocation(Constants.MOD_ID, name));
+        setUnlocalizedName(name);
     }
 
     @Override

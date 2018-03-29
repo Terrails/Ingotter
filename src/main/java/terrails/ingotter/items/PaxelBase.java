@@ -9,10 +9,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.item.*;
-import net.minecraft.util.EnumActionResult;
-import net.minecraft.util.EnumFacing;
-import net.minecraft.util.EnumHand;
-import net.minecraft.util.SoundCategory;
+import net.minecraft.util.*;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.ReflectionHelper;
@@ -20,8 +17,6 @@ import net.minecraftforge.oredict.OreDictionary;
 import terrails.ingotter.Constants;
 
 import javax.annotation.Nullable;
-import java.lang.reflect.Field;
-import java.util.HashSet;
 import java.util.Set;
 
 public class PaxelBase extends ItemTool {
@@ -31,8 +26,8 @@ public class PaxelBase extends ItemTool {
     public PaxelBase(ToolMaterial materialIn, String name) {
         super(2.5F, -2.0F, materialIn, Sets.newHashSet());
         setCreativeTab(Constants.TOOLS_TAB);
-        setRegistryName(name);
-        setUnlocalizedName(name);
+        setRegistryName(new ResourceLocation(Constants.MOD_ID, name));
+        setUnlocalizedName(Constants.MOD_ID + "." + name);
         if (EFFECTIVE_ON == null) {
             EFFECTIVE_ON = getEffectiveOn();
         }
@@ -52,9 +47,9 @@ public class PaxelBase extends ItemTool {
         return axe && pickaxe ? super.getDestroySpeed(stack, state) : this.efficiency;
     }
 
+    @SuppressWarnings("unchecked")
     private static Set<Block> getEffectiveOn() {
         try {
-            // Runs only once so not that big of a performance hit
             Set<Block> set = Sets.newHashSet();
             String[] fieldNames = new String[]{"EFFECTIVE_ON", "field_150915_c", "field_150916_c", "field_150917_c"};
             set.addAll((Set<Block>) ReflectionHelper.findField(ItemSpade.class, fieldNames).get(Sets.newHashSet()));
