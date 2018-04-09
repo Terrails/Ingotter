@@ -15,6 +15,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.ReflectionHelper;
 import net.minecraftforge.oredict.OreDictionary;
 import terrails.ingotter.Constants;
+import terrails.ingotter.Ingotter;
 
 import javax.annotation.Nullable;
 import java.util.Set;
@@ -25,9 +26,9 @@ public class PaxelBase extends ItemTool {
     
     public PaxelBase(ToolMaterial materialIn, String name) {
         super(2.5F, -2.0F, materialIn, Sets.newHashSet());
-        setCreativeTab(Constants.TOOLS_TAB);
-        setRegistryName(new ResourceLocation(Constants.MOD_ID, name));
-        setUnlocalizedName(Constants.MOD_ID + "." + name);
+        setCreativeTab(Ingotter.TOOLS_TAB);
+        setRegistryName(new ResourceLocation(Ingotter.MOD_ID, name));
+        setUnlocalizedName(Ingotter.MOD_ID + "." + name);
         if (EFFECTIVE_ON == null) {
             EFFECTIVE_ON = getEffectiveOn();
         }

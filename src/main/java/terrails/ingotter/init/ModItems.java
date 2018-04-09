@@ -12,9 +12,11 @@ import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import terrails.ingotter.Constants;
+import terrails.ingotter.Ingotter;
 import terrails.ingotter.config.ConfigHandler;
 import terrails.ingotter.items.ArmorRepairBase;
 import terrails.ingotter.items.PaxelBase;
@@ -27,7 +29,7 @@ import java.util.stream.Collectors;
 
 @SuppressWarnings("WeakerAccess")
 @Mod.EventBusSubscriber
-@GameRegistry.ObjectHolder(Constants.MOD_ID)
+@GameRegistry.ObjectHolder(Ingotter.MOD_ID)
 public class ModItems {
 
     // Need to use a map since JAOPCA won't work if I don't register
@@ -277,8 +279,8 @@ public class ModItems {
 
     public static void init() {
         if (ConfigHandler.wireHammer) {
-            add(new CraftingDurabilityItem("hammer", 128).setCreativeTab(Constants.TOOLS_TAB));
-            add(new CraftingDurabilityItem("wire_cutters", 128).setCreativeTab(Constants.TOOLS_TAB));
+            add(new CraftingDurabilityItem("hammer", 128).setCreativeTab(Ingotter.TOOLS_TAB));
+            add(new CraftingDurabilityItem("wire_cutters", 128).setCreativeTab(Ingotter.TOOLS_TAB));
         }
 
         if (ConfigHandler.ingots)
@@ -305,19 +307,19 @@ public class ModItems {
         for (Item item : get()) {
             String name = item.getUnlocalizedName();
             if (ConfigHandler.armor && (name.contains("_helmet") || name.contains("_chestplate") || name.contains("_leggings") || name.contains("_boots")))
-                item.setCreativeTab(Constants.TOOLS_TAB);
+                item.setCreativeTab(Ingotter.TOOLS_TAB);
             else if (ConfigHandler.tools && (name.contains("_sword") || name.contains("_pickaxe") || name.contains("_axe") || name.contains("_shovel") || name.contains("_hoe")))
-                item.setCreativeTab(Constants.TOOLS_TAB);
+                item.setCreativeTab(Ingotter.TOOLS_TAB);
             else if (ConfigHandler.ingots && name.contains("_ingot"))
-                item.setCreativeTab(Constants.RESOURCES_TAB);
+                item.setCreativeTab(Ingotter.RESOURCES_TAB);
             else if ((ConfigHandler.gemNuggets || ConfigHandler.ingotNuggets) && name.contains("_nugget"))
-                item.setCreativeTab(Constants.RESOURCES_TAB);
+                item.setCreativeTab(Ingotter.RESOURCES_TAB);
             else if (ConfigHandler.plates && name.contains("_plate"))
-                item.setCreativeTab(Constants.RESOURCES_TAB);
+                item.setCreativeTab(Ingotter.RESOURCES_TAB);
             else if (ConfigHandler.wires && name.contains("_wire"))
-                item.setCreativeTab(Constants.RESOURCES_TAB);
+                item.setCreativeTab(Ingotter.RESOURCES_TAB);
             else if (ConfigHandler.dusts && name.contains("_dust"))
-                item.setCreativeTab(Constants.RESOURCES_TAB);
+                item.setCreativeTab(Ingotter.RESOURCES_TAB);
         }
     }
 
@@ -610,51 +612,50 @@ public class ModItems {
 
     private static class BaseItem extends ItemBase {
         private BaseItem(String name) {
-            super(Constants.MOD_ID);
-            setRegistryName(new ResourceLocation(Constants.MOD_ID, name));
-            setUnlocalizedName(name);
+            setRegistryName(new ResourceLocation(Ingotter.MOD_ID, name));
+            setUnlocalizedName(Ingotter.MOD_ID + "." + name);
         }
     }
     private static class AxeItem extends AxeBase {
         private AxeItem(ToolMaterial material, String name) {
-            super(material, Constants.MOD_ID);
-            this.setRegistryName(new ResourceLocation(Constants.MOD_ID, name));
-            this.setUnlocalizedName(name);
+            super(material);
+            this.setRegistryName(new ResourceLocation(Ingotter.MOD_ID, name));
+            setUnlocalizedName(Ingotter.MOD_ID + "." + name);
         }
     }
     private static class HoeItem extends HoeBase {
         private HoeItem(ToolMaterial material, String name) {
-            super(material, Constants.MOD_ID);
-            this.setRegistryName(new ResourceLocation(Constants.MOD_ID, name));
-            this.setUnlocalizedName(name);
+            super(material);
+            this.setRegistryName(new ResourceLocation(Ingotter.MOD_ID, name));
+            setUnlocalizedName(Ingotter.MOD_ID + "." + name);
         }
     }
     private static class PickaxeItem extends PickaxeBase {
         private PickaxeItem(ToolMaterial material, String name) {
-            super(material, Constants.MOD_ID);
-            this.setRegistryName(new ResourceLocation(Constants.MOD_ID, name));
-            this.setUnlocalizedName(name);
+            super(material);
+            this.setRegistryName(new ResourceLocation(Ingotter.MOD_ID, name));
+            setUnlocalizedName(Ingotter.MOD_ID + "." + name);
         }
     }
     private static class ShovelItem extends ShovelBase {
         private ShovelItem(ToolMaterial material, String name) {
-            super(material, Constants.MOD_ID);
-            this.setRegistryName(new ResourceLocation(Constants.MOD_ID, name));
-            this.setUnlocalizedName(name);
+            super(material);
+            this.setRegistryName(new ResourceLocation(Ingotter.MOD_ID, name));
+            setUnlocalizedName(Ingotter.MOD_ID + "." + name);
         }
     }
     private static class SwordItem extends SwordBase {
         public SwordItem(ToolMaterial material, String name) {
-            super(material, Constants.MOD_ID);
-            this.setRegistryName(new ResourceLocation(Constants.MOD_ID, name));
-            this.setUnlocalizedName(name);
+            super(material);
+            this.setRegistryName(new ResourceLocation(Ingotter.MOD_ID, name));
+            setUnlocalizedName(Ingotter.MOD_ID + "." + name);
         }
     }
     private static class CraftingDurabilityItem extends ItemCraftingDurabilityBase {
         private CraftingDurabilityItem(String name, int damage) {
-            super(Constants.MOD_ID, damage);
-            setRegistryName(new ResourceLocation(Constants.MOD_ID, name));
-            setUnlocalizedName(name);
+            super(damage);
+            setRegistryName(new ResourceLocation(Ingotter.MOD_ID, name));
+            setUnlocalizedName(Ingotter.MOD_ID + "." + name);
             this.displayDurability = true;
         }
     }
@@ -668,18 +669,9 @@ public class ModItems {
         return itemList.toArray(new Item[itemList.size()]);
     }
 
-    @SubscribeEvent
+    @SubscribeEvent(priority = EventPriority.LOW)
     public static void registerItems(RegistryEvent.Register<Item> event) {
-        event.getRegistry().registerAll(get());
         ModOreDictionary.initItems();
-    }
-
-    @SubscribeEvent
-    public static void registerModels(ModelRegistryEvent event) {
-        for (Item item : get()) {
-            if (item.getRegistryName() != null)
-                ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName(), "inventory"));
-        }
     }
 
     static {

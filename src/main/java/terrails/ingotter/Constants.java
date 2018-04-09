@@ -14,24 +14,9 @@ import terrails.ingotter.init.tabs.ModToolsCreativeTab;
 
 public class Constants {
 
-    public static final String MOD_ID = "ingotter";
-    public static final String MOD_NAME = "Ingotter";
-
-    public static final String VERSION = "2.0.7";
-    public static final String TERRACORE_VERSION = "2.1.9";
-    public static final String ORE_CONTROLLER_VERSION = "1.0.0";
-    public static final String MC_VERSION = "[1.12],[1.12.1],[1.12.2]";
-
-    public static final String CLIENT_PROXY = "terrails.ingotter.proxies.ClientProxy";
-    public static final String SERVER_PROXY = "terrails.ingotter.proxies.ServerProxy";
-    public static final String GUI_FACTORY = "terrails.ingotter.config.ConfigFactoryGUI";
-
-    public static final ModResourcesCreativeTab RESOURCES_TAB = new ModResourcesCreativeTab();
-    public static final ModToolsCreativeTab TOOLS_TAB = new ModToolsCreativeTab();
-
-    public static final Logger LOGGER = LogManager.getLogger(MOD_NAME);
+    public static final Logger LOGGER = LogManager.getLogger(Ingotter.MOD_NAME);
     public static void playerMessage(EntityPlayer player, String message) {
-        player.sendMessage(new TextComponentString("[" + TextFormatting.GREEN + MOD_NAME + TextFormatting.RESET + "] " + message));
+        player.sendMessage(new TextComponentString("[" + TextFormatting.GREEN + Ingotter.MOD_NAME + TextFormatting.RESET + "] " + message));
     }
 
     public static class Materials {

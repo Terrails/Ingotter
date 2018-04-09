@@ -3,30 +3,24 @@ package terrails.ingotter.init;
 import com.google.common.collect.Maps;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemBlock;
-import net.minecraftforge.client.event.ModelRegistryEvent;
-import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.eventhandler.EventPriority;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
-import terrails.ingotter.Constants;
+import terrails.ingotter.Ingotter;
 import terrails.ingotter.blocks.BlockOreBase;
 import terrails.ingotter.blocks.BlockOreCustomDrop;
 import terrails.ingotter.config.ConfigHandler;
 
-import java.util.Arrays;
 import java.util.LinkedHashMap;
-import java.util.Map;
 import java.util.Objects;
-import java.util.stream.Collectors;
 
 @SuppressWarnings("WeakerAccess")
 @Mod.EventBusSubscriber
-@GameRegistry.ObjectHolder(Constants.MOD_ID)
+@GameRegistry.ObjectHolder(Ingotter.MOD_ID)
 public class ModBlocks {
 
     public static LinkedHashMap<String, Block> blocks = Maps.newLinkedHashMap();
@@ -150,26 +144,12 @@ public class ModBlocks {
     }
 
     public static Block[] get() {
-        return blocks.values().toArray(new Block[blocks.size()]);
+        return blocks.values().toArray(new Block[0]);
     }
 
-    @SubscribeEvent
-    public static void registerBlocks(RegistryEvent.Register<Block> event) {
-        event.getRegistry().registerAll(get());
-    }
-    @SubscribeEvent
-    public static void registerItemBlocks(net.minecraftforge.event.RegistryEvent.Register<Item> event) {
-        for (Block block : get()) {
-            if (block.getRegistryName() != null)
-                event.getRegistry().register(new ItemBlock(block).setRegistryName(block.getRegistryName()));
-        }
+    @SubscribeEvent(priority = EventPriority.LOW)
+    public static void registerItemBlocks(RegistryEvent.Register<Item> event) {
         ModOreDictionary.initBlocks();
-    }
-    @SubscribeEvent
-    public static void registerModels(ModelRegistryEvent event) {
-        for (Block block : get()) {
-            ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), 0, new ModelResourceLocation(Objects.requireNonNull(block.getRegistryName()), "inventory"));
-        }
     }
 
     static {

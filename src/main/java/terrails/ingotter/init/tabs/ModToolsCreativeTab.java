@@ -15,7 +15,7 @@ import javax.annotation.Nonnull;
 public class ModToolsCreativeTab extends CreativeTabsBase {
 
     public ModToolsCreativeTab() {
-        super("ingotter_tools");
+        super("ingotter_tools", ItemStack.EMPTY);
     }
 
     @Nonnull

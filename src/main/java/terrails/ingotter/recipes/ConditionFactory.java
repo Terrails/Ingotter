@@ -5,6 +5,7 @@ import net.minecraft.util.JsonUtils;
 import net.minecraftforge.common.crafting.IConditionFactory;
 import net.minecraftforge.common.crafting.JsonContext;
 import terrails.ingotter.Constants;
+import terrails.ingotter.Ingotter;
 import terrails.ingotter.config.ConfigHandler;
 
 import java.util.function.BooleanSupplier;
@@ -17,27 +18,27 @@ public class ConditionFactory implements IConditionFactory {
         String key = JsonUtils.getString(json, "type");
 
         switch (key) {
-            case Constants.MOD_ID + ":crafting_tools":
+            case Ingotter.MOD_ID + ":crafting_tools":
                 return () -> ConfigHandler.wireHammer == value;
-            case Constants.MOD_ID + ":tools":
+            case Ingotter.MOD_ID + ":tools":
                 return () -> ConfigHandler.tools == value;
-            case Constants.MOD_ID + ":ores":
+            case Ingotter.MOD_ID + ":ores":
                 return () -> ConfigHandler.ores == value;
-            case Constants.MOD_ID + ":plates":
+            case Ingotter.MOD_ID + ":plates":
                 return () -> ConfigHandler.plates == value;
-            case Constants.MOD_ID + ":dusts":
+            case Ingotter.MOD_ID + ":dusts":
                 return () -> ConfigHandler.dusts == value;
-            case Constants.MOD_ID + ":wires":
+            case Ingotter.MOD_ID + ":wires":
                 return () -> ConfigHandler.wires == value;
-            case Constants.MOD_ID + ":armor":
+            case Ingotter.MOD_ID + ":armor":
                 return () -> ConfigHandler.armor == value;
-            case Constants.MOD_ID + ":ingots":
+            case Ingotter.MOD_ID + ":ingots":
                 return () -> ConfigHandler.ingots == value;
-            case Constants.MOD_ID + ":ingot_nuggets":
+            case Ingotter.MOD_ID + ":ingot_nuggets":
                 return () -> ConfigHandler.ingotNuggets == value;
-            case Constants.MOD_ID + ":gem_nuggets":
+            case Ingotter.MOD_ID + ":gem_nuggets":
                 return () -> ConfigHandler.gemNuggets == value;
-            case Constants.MOD_ID + ":blocks":
+            case Ingotter.MOD_ID + ":blocks":
                 return () -> ConfigHandler.blocks == value;
         }
         return null;
