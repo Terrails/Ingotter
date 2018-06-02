@@ -20,19 +20,19 @@ public class Constants {
     }
 
     public static class Materials {
-        public static final Item.ToolMaterial COPPER_TOOL = EnumHelper.addToolMaterial("COPPER", 2, 179, 5.0F, 0.8F, 8);
-        public static final Item.ToolMaterial TIN_TOOL = EnumHelper.addToolMaterial("TIN", 2, 199, 6.0F, 1.2F, 10);
-        public static final Item.ToolMaterial SILVER_TOOL = EnumHelper.addToolMaterial("SILVER", 3, 215, 6.2F, 1.8F, 21);
-        public static final Item.ToolMaterial LEAD_TOOL = EnumHelper.addToolMaterial("LEAD", 2, 149, 5.5F, 1.2F, 11);
-        public static final Item.ToolMaterial ALUMINUM_TOOL = EnumHelper.addToolMaterial("ALUMINUM", 2, 255, 11.0F, 1.2F, 14);
+        public static final Item.ToolMaterial COPPER_TOOL = EnumHelper.addToolMaterial("COPPER", 1, 179, 5.0F, 0.8F, 8);
+        public static final Item.ToolMaterial TIN_TOOL = EnumHelper.addToolMaterial("TIN", 1, 199, 6.0F, 1.2F, 10);
+        public static final Item.ToolMaterial SILVER_TOOL = EnumHelper.addToolMaterial("SILVER", 1, 215, 6.2F, 1.8F, 21);
+        public static final Item.ToolMaterial LEAD_TOOL = EnumHelper.addToolMaterial("LEAD", 1, 149, 5.5F, 1.2F, 11);
+        public static final Item.ToolMaterial ALUMINUM_TOOL = EnumHelper.addToolMaterial("ALUMINUM", 1, 255, 11.0F, 1.2F, 14);
         public static final Item.ToolMaterial NICKEL_TOOL = EnumHelper.addToolMaterial("NICKEL", 2, 299, 7.0F, 2.1F, 16);
         public static final Item.ToolMaterial PLATINUM_TOOL = EnumHelper.addToolMaterial("PLATINUM", 4, 1800, 10.0F, 4.5F, 10);
         public static final Item.ToolMaterial STEEL_TOOL = EnumHelper.addToolMaterial("STEEL", 2, 650, 7.5F, 2.1F, 11);
-        public static final Item.ToolMaterial ELECTRUM_TOOL = EnumHelper.addToolMaterial("ELECTRUM", 2, 115, 15.0F, 0.5F, 27);
+        public static final Item.ToolMaterial ELECTRUM_TOOL = EnumHelper.addToolMaterial("ELECTRUM", 0, 115, 15.0F, 0.5F, 27);
         public static final Item.ToolMaterial BRONZE_TOOL = EnumHelper.addToolMaterial("BRONZE", 2, 650, 7.0F, 2.5F, 18);
-        public static final Item.ToolMaterial EMERALD_TOOL = EnumHelper.addToolMaterial("EMERALD", 4, 1656, 13.0F, 3.0F, 21);
-        public static final Item.ToolMaterial LAPIS_TOOL = EnumHelper.addToolMaterial("LAPIS", 2, 255, 4.8F, 0.7F, 22);
-        public static final Item.ToolMaterial REDSTONE_TOOL = EnumHelper.addToolMaterial("REDSTONE", 2, 200, 4.2F, 0.4F, 22);
+        public static final Item.ToolMaterial EMERALD_TOOL = EnumHelper.addToolMaterial("EMERALD", 3, 1656, 13.0F, 3.0F, 21);
+        public static final Item.ToolMaterial LAPIS_TOOL = EnumHelper.addToolMaterial("LAPIS", 1, 255, 4.8F, 0.7F, 22);
+        public static final Item.ToolMaterial REDSTONE_TOOL = EnumHelper.addToolMaterial("REDSTONE", 0, 200, 4.2F, 0.4F, 22);
         public static final Item.ToolMaterial INVAR_TOOL = EnumHelper.addToolMaterial("INVAR", 2, 360, 6.5F, 2.3F, 14);
 
         public static final ItemArmor.ArmorMaterial COPPER_ARMOR = EnumHelper.addArmorMaterial("COPPER", "ingotter:copper", 7, new int[] { 2, 4, 4, 2 }, 7, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F);

@@ -33,7 +33,7 @@ repositories {
 }
 
 dependencies {
-    deobfCompile(group: "terrails.terracore", name: "TerraCore", version: "${minecraft_major}-${terracore_version}-SNAPSHOT.+")
+    deobfCompile(group: "terrails.terracore", name: "TerraCore", version: "${minecraft_major}-${terracore_version}")
 }
 
 processResources {
@@ -53,3 +53,10 @@ processResources {
 
 sourceCompatibility = targetCompatibility = '1.8'
 sourceCompatibility = targetCompatibility = '1.8'
+
+/** Cleans old SNAPSHOT versions of TerraCore since IntelliJ
+ is sometimes being stupid and uses older version for libraries **/
+task refreshDeobf {
+    dependsOn 'deobfCompileDeobfDepTask0'
+    dependsOn 'deobfCompileRemapDepSourcesTask1'
+}

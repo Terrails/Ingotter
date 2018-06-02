@@ -2,7 +2,6 @@ package terrails.ingotter.blocks;
 
 import net.minecraft.block.material.Material;
 import net.minecraft.util.ResourceLocation;
-import terrails.ingotter.Constants;
 import terrails.ingotter.Ingotter;
 import terrails.terracore.block.BlockBase;
 
